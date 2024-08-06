@@ -14,7 +14,9 @@
 		"astro": "^4.13.1",
 		"typescript": "^5.5.4"
 	},
-	"optionalDependencies": {
-		"@rollup/rollup-linux-x64-gnu": "^4.20.0"
+	"overrides": {
+		"vite": {
+			"rollup": "npm:@rollup/wasm-node"
+		}
 	}
 }
