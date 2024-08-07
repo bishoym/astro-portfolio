@@ -4,7 +4,9 @@ import '@/styles/fonts.css';
 import '@/styles/globals.css';
 
 /** Local imports */
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
+import ProjectSection from '@/components/ProjectSection.astro';
+import ProjectImage from '@/components/ProjectImage.astro';
 
 /** Asset imports */
 import BishoyFace from '../assets/bishoy-rwanda-conf-cropped.jpeg';
@@ -13,202 +15,304 @@ import IdentificationHome from '../assets/tfc/identification-home-page.jpg';
 import ObserverDashboard from '../assets/tfc/observer-dashboard.png';
 import OnboardDashboard from '../assets/tfc/onboard-dashboard.png';
 import OnboardMobileTrack from '../assets/tfc/onboard-track.png';
+import SnapperH3 from '../assets/tfc/snapper-h3-grouped-surveys.png';
+import SnapperMatchLine from '../assets/tfc/snapper-match-line.png';
+import LensDetector from '../assets/tfc/custom-detector.png';
+import MobileFreqSurvey from '../assets/tfc/mobile-frequency-survey.png';
+
+import FlowlyLogo from '../assets/flowly/flowly-logo.svg';
+import EventsList from '../assets/flowly/events-list.png';
+import UserHomeFlowScore from '../assets/flowly/user-home-flow-score.png';
+
+import DexiLogo from '../assets/dexi/dexi-logo.svg';
+import DashboardDesktop from '../assets/dexi/dashboard-mockup.png';
+import DashboardMobile from '../assets/dexi/dashboard-mockup-mobile.png';
+import PatientScheduling from '../assets/dexi/patient-scheduling.webp';
+import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 ---
 
 <Layout title="Bishoy Maher — User Experience Engineer">
 	<main class="flex flex-col pb-12">
 		<section
-			class="text-gray-950 flex flex-col gap-8 pt-8 px-4 max-sm:text-lg max-w-xl mx-auto md:border-x-px border-dashed"
+			class="mx-auto flex max-w-xl flex-col gap-8 border-dashed px-7 pt-8 text-gray-950 max-sm:text-lg md:border-x-px md:px-4"
 		>
-			<div class="md:w-[60%] md:ml-auto">
+			<div class="md:ml-auto md:w-[60%]">
 				<p class="font-bold">Bishoy Maher</p>
 				<p>User Experience Engineer</p>
 			</div>
 
 			<h1
-				class="text-5xl md:text-[3.5rem] leading-none pr-8 md:pr-20 tracking-tighter"
+				class="pr-8 text-5xl leading-none tracking-tighter md:pr-20 md:text-[3.5rem]"
 			>
 				Crafting a future <span class="font-serif italic text-sky-600"
 					>worth waking up for</span
 				>, one product at a time
 			</h1>
 
-			<p class="md:ml-auto md:w-[60%] tracking-tight">
-				I&apos;m passionate about building human-centric, sometimes AI-powered,
-				solutions in complex domains.
+			<p class="tracking-tight md:ml-auto md:w-[60%]">
+				I'm a designer/engineer hybrid with over 4 years of experience
+				navigating complex domains to deliver compelling digital products.
+
 				<br />
 				<br />
-				I focus on engineering products with compelling user experiences; starting
-				from user research & wire-framing, to production-ready web applications.
-				<br />
-				<br />
-				I am on a mission to drive positive change through technology that supports
-				the UN's Sustainable Development Goals. I have a particular interest in companies
-				that fight climate change, support health and wellness, or improve access
-				to education.
+				My work has
+				<a href="#tfc" class="text-sky-600 underline-offset-4 hover:underline">
+					guided $1B+ in infrastructure investments</a
+				> and empowered thousands of patients to <a
+					href="#flowly"
+					class="text-sky-600 underline-offset-4 hover:underline"
+					>take control of their chronic pain</a
+				>.
+
+				<br />I'm excited to partner with organizations that share my passion
+				for building tech that aligns with the UN's Sustainable Development
+				Goals
 			</p>
 
-			<div class="md:ml-auto md:w-[60%] flex align-middle gap-3">
+			<div class="flex gap-3 align-middle md:ml-auto md:w-[60%]">
 				<button
-					class="rounded-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition ease-in-out hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 pl-2 py-2 shadow-md hover:shadow-lg duration-200"
+					class="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 py-2 pl-2 text-sm font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 				>
 					<Image
 						loading="eager"
 						alt="bishoy's face"
 						src={BishoyFace}
-						class="rounded-full mr-2"
+						class="mr-2 rounded-full"
 						width={28}
 						height={28}
 					/>Book a call</button
 				>
 				<a
-					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-sky-600 hover:underline underline-offset-4"
+					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-600 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>More about me</a
 				>
 			</div>
 		</section>
 
-		<section class="pt-16">
-			<div
-				class="max-sm:text-lg max-w-xl mx-auto md:border-x-px border-dashed pb-6"
-			>
-				<div class="md:flex">
-					<span class="md:flex-1 align-middle">
-						<Image
-							loading="eager"
-							src={TfCLogo}
-							alt="Transport for Cairo logo"
-							class="pl-8 w-40 border-l-px border-l-[#113BB8] -ml-px py-2"
-						/>
-					</span>
-					<h2 class="md:w-[60%] text-2xl text-gray-500 max-md:px-7 pr-4">
-						Transport for Cairo is a boutique consultancy keeping the next 100
-						mega-cities moving. <span class="text-primary">
-							I led RouteLab&apos;s product design & development.</span
-						>
-					</h2>
-				</div>
+		<ProjectSection
+			id="tfc"
+			title="Transport for Cairo is a boutique consultancy keeping the next 100 mega-cities moving."
+			role="I led RouteLab's product design & development."
+		>
+			<Image
+				loading="eager"
+				src={TfCLogo}
+				alt="Transport for Cairo logo"
+				class="w-40 border-l-[#113BB8] py-2 pl-8 md:-ml-px md:border-l-px"
+				slot="logo"
+			/>
 
-				<div class="md:ml-auto md:w-[60%] max-md:px-7 pr-4 pt-6">
-					<p>
-						I spent 3 years honing my skills in full-stack web development and
-						UI/UX design by developing, iterating, and delivering 4 geospatial
-						applications that transformed the way data is collected for
-						infrastructure projects in data-poor environments.
-						<br />
-						<br />
-						RouteLab not only improved data accuracy, speed, and quality but it also
-						reduced traditional costs by 75%. This made it the go-to tool for large-scale
-						data collection efforts by the World Bank, AFD, and WRI.
-					</p>
-				</div>
-			</div>
+			<p slot="description">
+				On TfC's journey towards bringing order out of the chaos found in many
+				African countries' informal transit systems, we developed a set of data
+				tools to aid in the collection, visualization, and processing of
+				geographical data.
+				<br />
+				<br />
+				I was initially hired to build a dashboard to aid the team in visualizing
+				data collected in the field. In 3 short years, my responsibilities grew from
+				frontend tasks to product ownership. I delivered 4 geospatial applications
+				under a unified RouteLab Design System.
+				<br />
+				<br />
+				RouteLab not only improved data accuracy, speed, and quality but it also
+				reduced traditional data collection costs by 75%. This made it the go-to
+				tool for large-scale data collection efforts by the World Bank, AFD, GIZ,
+				and the World Resources Institute.
+			</p>
 
-			<div class="relative w-full">
-				<div
-					class="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-24 -my-24"
-				>
-					<div
-						class="flex flex-row justify-start gap-6 h-[28rem] md:h-[34rem] pl-6 last:pr-4"
-					>
-						<div
-							class="max-w-full aspect-[9/19.2] shadow-2xl rounded-2xl bg-gray-100 overflow-hidden"
-						>
-							<Image
-								alt="You can do more with AI."
-								loading="lazy"
-								decoding="async"
-								data-nimg="fill"
-								src={IdentificationHome}
-							/>
-						</div>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[9/19.2]"
+				src={IdentificationHome}
+				alt="Observer mobile app conducting an identification survey"
+			/>
 
-						<div
-							class="max-w-full aspect-[15.3/10] rounded-2xl shadow-2xl bg-gray-100 h-full overflow-hidden"
-						>
-							<Image
-								alt="You can do more with AI."
-								loading="lazy"
-								decoding="async"
-								data-nimg="fill"
-								src={ObserverDashboard}
-							/>
-						</div>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[15.3/10]"
+				src={ObserverDashboard}
+				alt="Observer web dashboard"
+			/>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[9/17.8]"
+				src={OnboardMobileTrack}
+				alt="Observer mobile app conducting an onboard survey"
+			/>
 
-						<div
-							class="max-w-full aspect-[9/17.8] object-cover rounded-2xl shadow-2xl bg-gray-100 overflow-hidden"
-						>
-							<Image
-								alt="You can do more with AI."
-								loading="lazy"
-								decoding="async"
-								data-nimg="fill"
-								src={OnboardMobileTrack}
-							/>
-						</div>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[20/9]"
+				src={OnboardDashboard}
+				alt="Observer onboard survey web dashboard"
+			/>
 
-						<div
-							class="max-w-full aspect-[20/9] object-fill rounded-2xl shadow-2xl bg-gray-100 h-full overflow-hidden"
-						>
-							<Image
-								alt="You can do more with AI."
-								loading="lazy"
-								decoding="async"
-								data-nimg="fill"
-								src={OnboardDashboard}
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- the swipeable carousel of images -->
-		</section>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[9/17.8]"
+				src={MobileFreqSurvey}
+				alt="Observer mobile app conducting a frequency survey"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[5.2/3]"
+				src={SnapperH3}
+				alt="Observer Onboard Survey Web Dashboard"
+			/>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[19.3/9]"
+				src={SnapperMatchLine}
+				alt="Snapper Web GIS Editor"
+			/>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[4.2/3]"
+				src={LensDetector}
+				alt="Custom trained YOLOv3 model detecting microbuses, motorcycles, and trucks"
+			/>
+		</ProjectSection>
+
+		<ProjectSection
+			id="flowly"
+			title="Flowly is a virtual clinic helping patients manage chronic pain & anxiety from the comfort of their home."
+			role="We partnered to deliver a seamless experience for our healthcare providers."
+		>
+			<Image
+				loading="lazy"
+				src={FlowlyLogo}
+				alt="Flowly logo"
+				class="w-36 border-l-[#8DAAEB] py-2 pl-8 md:-ml-px md:border-l-px"
+				slot="logo"
+			/>
+
+			<p slot="description">
+				Over the course of 2 years, we iterated and developed the
+				provider-facing portal multiple times, integrating with multiple
+				third-party services to provide a seamless experience for our users.
+			</p>
+
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[16/10]"
+				src={EventsList}
+				alt="Flowly portal, managing events"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[17/10]"
+				src={UserHomeFlowScore}
+				alt="Flowly portal, user homepage"
+			/>
+		</ProjectSection>
+
+		<ProjectSection
+			id="dexi"
+			title="Dexi is building the OS for dental clinics."
+			role="I led the user experience planning and design, and mentored the frontend team."
+		>
+			<Image
+				loading="lazy"
+				src={DexiLogo}
+				alt="Dexi logo"
+				class="w-36 border-l-[#8DAAEB] py-2 pl-8 md:-ml-px md:border-l-px"
+				slot="logo"
+			/>
+
+			<p slot="description">
+				About a year ago, a friend of mine approached me with frustrations about
+				the state of dental practice management tools in the Egyptian market. He
+				was in the middle of setting up his clinic and didn't feel like any of
+				the solutions on the market met his needs exactly. He was hell-bent on
+				finding a solution though, even if he had to build it himself. In the
+				past 15 months, we went and did exactly that. Going from idea, to
+				designs, to real live code
+			</p>
+
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[9/18.5]"
+				src={DashboardMobile}
+				alt="Mobile responsive view of the Dexi dashboard"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[16/10]"
+				src={TreatmentPlanning}
+				alt="Treatment planner"
+			/>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[16/10]"
+				src={PatientScheduling}
+				alt="Patient scheduler"
+			/>
+			<ProjectImage
+				slot="client-work"
+				sx="aspect-[16.2/10]"
+				src={DashboardDesktop}
+				alt="Desktop view of the Dexi dashboard"
+			/>
+		</ProjectSection>
 
 		<section
-			class="pt-16 max-sm:text-lg max-w-xl mx-auto md:border-x-px border-dashed"
+			class="mx-auto max-w-xl border-dashed pb-12 pt-24 max-sm:text-lg md:border-x-px"
 		>
 			<h2
-				class="text-5xl md:text-[3.5rem] leading-none pr-20 pl-7 md:pl-4 tracking-tighter"
+				class="pl-7 pr-20 text-5xl leading-none tracking-tighter md:pl-4 md:text-[3.5rem]"
 			>
 				Let&apos;s build a better future, <span
 					class="font-serif italic text-sky-600">together</span
 				>
 			</h2>
-			<p class="md:ml-auto md:w-[60%] max-md:px-7 md:pr-4 pt-4">
-				I am currently available for hire as a part-time or full-time
-				independent contractor.
+			<p class="pt-4 max-md:px-7 md:ml-auto md:w-[60%] md:pr-4">
+				I am currently available for hire as an independent contractor.
 				<br />
 				<br />
-				I have a particular interest in companies that fight climate change, support
-				health and wellness, or improve access to education. If that sounds like
-				you, let&apos;s talk!
+				I can only take on a limited number of projects each year. For this reason,
+				I choose to work exclusively with companies that fight climate change, support
+				health and wellness, or improve access to education.
+				<br />
+				<br />
+				If that sounds like you, let&apos;s talk!
 			</p>
 			<div
-				class="max-md:px-7 pt-6 md:ml-auto md:w-[60%] flex align-middle gap-3"
+				class="flex gap-3 pt-6 align-middle max-md:px-7 md:ml-auto md:w-[60%]"
 			>
 				<button
-					class="rounded-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition ease-in-out hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 pl-2 py-2 shadow-md hover:shadow-lg duration-200"
+					class="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 py-2 pl-2 text-sm font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 				>
 					<Image
 						alt="bishoy's face"
 						src={BishoyFace}
-						class="rounded-full mr-2"
+						class="mr-2 rounded-full"
 						width={28}
 						height={28}
 					/>Book a call</button
 				>
 				<a
-					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-sky-600 hover:underline underline-offset-4"
+					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-600 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>More about me</a
 				>
 			</div>
 		</section>
 	</main>
-	<footer class="bg-primary text-secondary flex-1 min-h-48 pt-8 max-md:px-7">
-		<div class="max-w-xl mx-auto md:flex md:justify-between w-full md:px-4">
-			<p>Find me on the internet</p>
-			<!-- <span> a bunch of logos</span> -->
-			<aside>Working remote from Cairo, Egypt</aside>
+	<footer class="min-h-56 flex-1 bg-primary pt-8 text-secondary max-md:px-7">
+		<div class="mx-auto w-full max-w-xl md:flex md:justify-between md:px-4">
+			<div class="pb-24 md:pb-0">
+				<p>Find me on the internet</p>
+				<span class="flex gap-4 text-slate-300">
+					<a class="underline-offset-4 hover:underline">Email</a>
+					<a class="underline-offset-4 hover:underline">Linkedin</a>
+					<a class="underline-offset-4 hover:underline">Dribbble</a>
+					<a class="underline-offset-4 hover:underline">Medium</a>
+				</span>
+			</div>
+			<aside class="pb-10">Working remote from Cairo, Egypt</aside>
 		</div>
 	</footer>
 </Layout>

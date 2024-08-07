@@ -1,0 +1,41 @@
+---
+interface Props {
+	id: string;
+	title: string;
+	role: string;
+}
+
+const { title, role, id } = Astro.props;
+---
+
+<section id={id}>
+	<div
+		class="mx-auto max-w-xl border-dashed pb-12 pt-24 max-sm:text-lg md:border-x-px"
+	>
+		<div class="flex flex-col gap-4 md:flex-row">
+			<span class="align-middle md:flex-1">
+				<slot name="logo" />
+			</span>
+			<h2 class="pr-4 text-2xl text-gray-500 max-md:px-7 md:w-[60%]">
+				{title}
+				<span class="text-primary">{role}</span>
+			</h2>
+		</div>
+
+		<div class="pr-4 pt-6 max-md:px-7 md:ml-auto md:w-[60%]">
+			<slot name="description" />
+		</div>
+	</div>
+
+	<div class="relative w-full">
+		<div
+			class="-my-24 flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-24 [scrollbar-width:none]"
+		>
+			<div
+				class="flex h-[28rem] flex-row justify-start gap-6 pl-6 last:pr-4 md:h-[34rem]"
+			>
+				<slot name="client-work" />
+			</div>
+		</div>
+	</div>
+</section>

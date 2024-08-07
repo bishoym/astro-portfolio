@@ -8,7 +8,7 @@ interface Props {
 const {
 	title,
 	description = 'A collection of the professional and personal works of Bishoy Maher',
-	image = '/image/bishoy.jpg',
+	image = '/image/bishoy.jpg'
 } = Astro.props;
 ---
 
@@ -23,7 +23,7 @@ const {
 		<meta property="og:image" content={image} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen flex flex-col">
+	<body class="mt-1 flex min-h-screen flex-col rounded-lg">
 		<slot />
 	</body>
 </html>
