@@ -1,14 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@/styles/globals.css';
+import { Image } from 'astro:assets';
 import '@/styles/fonts.css';
+import '@/styles/globals.css';
+
+/** Local imports */
+import Layout from '../layouts/Layout.astro';
+
+/** Asset imports */
+import BishoyFace from '../assets/bishoy-rwanda-conf-cropped.jpeg';
+import TfCLogo from '../assets/tfc/tfc-logo-color.png';
+import IdentificationHome from '../assets/tfc/identification-home-page.jpg';
+import ObserverDashboard from '../assets/tfc/observer-dashboard.png';
+import OnboardDashboard from '../assets/tfc/onboard-dashboard.png';
+import OnboardMobileTrack from '../assets/tfc/onboard-track.png';
 ---
 
 <Layout title="Bishoy Maher — User Experience Engineer">
-	<main
-		class="max-sm:text-lg max-w-xl mx-auto md:border-x-px flex flex-col gap-16 pb-12"
-	>
-		<section class="text-gray-950 flex flex-col gap-8 pt-8 px-4">
+	<main class="flex flex-col pb-12">
+		<section
+			class="text-gray-950 flex flex-col gap-8 pt-8 px-4 max-sm:text-lg max-w-xl mx-auto md:border-x-px border-dashed"
+		>
 			<div class="md:w-[60%] md:ml-auto">
 				<p class="font-bold">Bishoy Maher</p>
 				<p>User Experience Engineer</p>
@@ -39,9 +50,16 @@ import '@/styles/fonts.css';
 
 			<div class="md:ml-auto md:w-[60%] flex align-middle gap-3">
 				<button
-					class="rounded-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 pl-2 py-2"
+					class="rounded-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition ease-in-out hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 pl-2 py-2 shadow-md hover:shadow-lg duration-200"
 				>
-					<img class="rounded-full mr-2" width={28} height={28} />Book a call</button
+					<Image
+						loading="eager"
+						alt="bishoy's face"
+						src={BishoyFace}
+						class="rounded-full mr-2"
+						width={28}
+						height={28}
+					/>Book a call</button
 				>
 				<a
 					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-sky-600 hover:underline underline-offset-4"
@@ -50,61 +68,134 @@ import '@/styles/fonts.css';
 			</div>
 		</section>
 
-		<section>
-			<div class="md:flex">
-				<span class="md:flex-1">
+		<section class="pt-16">
+			<div
+				class="max-sm:text-lg max-w-xl mx-auto md:border-x-px border-dashed pb-6"
+			>
+				<div class="md:flex">
+					<span class="md:flex-1 align-middle">
+						<Image
+							loading="eager"
+							src={TfCLogo}
+							alt="Transport for Cairo logo"
+							class="pl-8 w-40 border-l-px border-l-[#113BB8] -ml-px py-2"
+						/>
+					</span>
+					<h2 class="md:w-[60%] text-2xl text-gray-500 max-md:px-7 pr-4">
+						Transport for Cairo is a boutique consultancy keeping the next 100
+						mega-cities moving. <span class="text-primary">
+							I led RouteLab&apos;s product design & development.</span
+						>
+					</h2>
+				</div>
+
+				<div class="md:ml-auto md:w-[60%] max-md:px-7 pr-4 pt-6">
+					<p>
+						I spent 3 years honing my skills in full-stack web development and
+						UI/UX design by developing, iterating, and delivering 4 geospatial
+						applications that transformed the way data is collected for
+						infrastructure projects in data-poor environments.
+						<br />
+						<br />
+						RouteLab not only improved data accuracy, speed, and quality but it also
+						reduced traditional costs by 75%. This made it the go-to tool for large-scale
+						data collection efforts by the World Bank, AFD, and WRI.
+					</p>
+				</div>
+			</div>
+
+			<div class="relative w-full">
+				<div
+					class="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-24 -my-24"
+				>
 					<div
-						class="bg-blue-400 w-28 h-7 border-l-px border-l-blue-900 -ml-px"
+						class="flex flex-row justify-start gap-6 h-[28rem] md:h-[34rem] pl-6 last:pr-4"
 					>
-						<!-- <img src="/images/tfc-logo.svg" /> -->
+						<div
+							class="max-w-full aspect-[9/19.2] shadow-2xl rounded-2xl bg-gray-100 overflow-hidden"
+						>
+							<Image
+								alt="You can do more with AI."
+								loading="lazy"
+								decoding="async"
+								data-nimg="fill"
+								src={IdentificationHome}
+							/>
+						</div>
+
+						<div
+							class="max-w-full aspect-[15.3/10] rounded-2xl shadow-2xl bg-gray-100 h-full overflow-hidden"
+						>
+							<Image
+								alt="You can do more with AI."
+								loading="lazy"
+								decoding="async"
+								data-nimg="fill"
+								src={ObserverDashboard}
+							/>
+						</div>
+
+						<div
+							class="max-w-full aspect-[9/17.8] object-cover rounded-2xl shadow-2xl bg-gray-100 overflow-hidden"
+						>
+							<Image
+								alt="You can do more with AI."
+								loading="lazy"
+								decoding="async"
+								data-nimg="fill"
+								src={OnboardMobileTrack}
+							/>
+						</div>
+
+						<div
+							class="max-w-full aspect-[20/9] object-fill rounded-2xl shadow-2xl bg-gray-100 h-full overflow-hidden"
+						>
+							<Image
+								alt="You can do more with AI."
+								loading="lazy"
+								decoding="async"
+								data-nimg="fill"
+								src={OnboardDashboard}
+							/>
+						</div>
 					</div>
-				</span>
-				<h2 class="md:w-[60%] text-2xl text-gray-500 max-md:px-7 pr-4">
-					Transport for Cairo is a boutique consultancy keeping the next 100
-					mega-cities moving. <span class="text-primary">
-						I led RouteLab&apos;s product design & development.</span
-					>
-				</h2>
+				</div>
 			</div>
-
-			<div class="md:ml-auto md:w-[60%] max-md:px-7 pr-4 pt-6">
-				<p>
-					I spent 3 years honing my skills in full-stack web development and
-					UI/UX design by developing, iterating, and delivering 4 geospatial
-					applications that transformed the way data is collected for
-					infrastructure projects in data-poor environments.
-					<br />
-					<br />
-					RouteLab not only improved data accuracy, speed, and quality but it also
-					reduced traditional costs by 75%. This made it the go-to tool for large-scale
-					data collection efforts by the World Bank, AFD, and WRI.
-				</p>
-			</div>
-
 			<!-- the swipeable carousel of images -->
 		</section>
 
-		<section>
+		<section
+			class="pt-16 max-sm:text-lg max-w-xl mx-auto md:border-x-px border-dashed"
+		>
 			<h2
-				class="text-[3.5rem] leading-none pr-20 pl-7 md:pl-4 tracking-tighter"
+				class="text-5xl md:text-[3.5rem] leading-none pr-20 pl-7 md:pl-4 tracking-tighter"
 			>
-				Let's build a better future, <span
+				Let&apos;s build a better future, <span
 					class="font-serif italic text-sky-600">together</span
 				>
 			</h2>
 			<p class="md:ml-auto md:w-[60%] max-md:px-7 md:pr-4 pt-4">
 				I am currently available for hire as a part-time or full-time
-				independent contractor. I have a particular interest in companies that
-				fight climate change, support health and wellness, or improve access to
-				education. If that sounds like you, let&apos;s talk!
+				independent contractor.
+				<br />
+				<br />
+				I have a particular interest in companies that fight climate change, support
+				health and wellness, or improve access to education. If that sounds like
+				you, let&apos;s talk!
 			</p>
 			<div
 				class="max-md:px-7 pt-6 md:ml-auto md:w-[60%] flex align-middle gap-3"
 			>
 				<button
-					class="rounded-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 pl-2 py-2"
+					class="rounded-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition ease-in-out hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 pl-2 py-2 shadow-md hover:shadow-lg duration-200"
 				>
-					<img class="rounded-full mr-2" width={28} height={28} />Book a call</button
+					<Image
+						alt="bishoy's face"
+						src={BishoyFace}
+						class="rounded-full mr-2"
+						width={28}
+						height={28}
+					/>Book a call</button
 				>
 				<a
 					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-sky-600 hover:underline underline-offset-4"
@@ -113,8 +204,8 @@ import '@/styles/fonts.css';
 			</div>
 		</section>
 	</main>
-	<footer class="bg-primary text-secondary h-48 pt-8 max-md:px-7">
-		<div class="max-w-xl mx-auto md:flex md:justify-between w-full">
+	<footer class="bg-primary text-secondary flex-1 min-h-48 pt-8 max-md:px-7">
+		<div class="max-w-xl mx-auto md:flex md:justify-between w-full md:px-4">
 			<p>Find me on the internet</p>
 			<!-- <span> a bunch of logos</span> -->
 			<aside>Working remote from Cairo, Egypt</aside>
