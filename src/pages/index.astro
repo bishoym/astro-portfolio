@@ -32,21 +32,29 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 ---
 
 <Layout title="Bishoy Maher — User Experience Engineer">
-	<main class="flex flex-col pb-12">
+	<main class="flex flex-col">
 		<section
 			class="mx-auto flex max-w-xl flex-col gap-8 border-dashed px-7 pt-8 text-gray-950 max-sm:text-lg md:border-x-px md:px-4"
 		>
 			<div class="md:ml-auto md:w-[60%]">
 				<p class="font-bold">Bishoy Maher</p>
-				<p>User Experience Engineer</p>
+				<p class="-mt-1">User Experience Engineer</p>
 			</div>
 
 			<h1
-				class="pr-8 text-5xl leading-none tracking-tighter md:pr-20 md:text-[3.5rem]"
+				class="pr-8 text-5xl leading-none tracking-tighter transition-transform duration-700 ease-in-out md:pr-20 md:text-[3.5rem]"
 			>
-				Crafting a future <span class="font-serif italic text-sky-600"
-					>worth waking up for</span
-				>, one product at a time
+				<div class="overflow-hidden py-4 leading-[3.2rem] md:h-[1.6em]">
+					<div class="slide-up-fade-in">Crafting a future</div>
+				</div>
+				<div
+					class="-mt-8 overflow-hidden py-4 font-serif italic leading-[3.2rem] text-sky-600 md:h-[1.6em]"
+				>
+					<div class="slide-up-fade-in">worth waking up for,</div>
+				</div>
+				<div class="-mt-8 overflow-hidden py-4 leading-[3.2rem] md:h-[1.6em]">
+					<div class="slide-up-fade-in">one product at a time</div>
+				</div>
 			</h1>
 
 			<p class="tracking-tight md:ml-auto md:w-[60%]">
@@ -56,11 +64,11 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 				<br />
 				<br />
 				My work has
-				<a href="#tfc" class="text-sky-600 underline-offset-4 hover:underline">
+				<a href="#tfc" class="text-sky-700 underline-offset-4 hover:underline">
 					guided $1B+ in infrastructure investments</a
 				> and empowered thousands of patients to <a
 					href="#flowly"
-					class="text-sky-600 underline-offset-4 hover:underline"
+					class="text-sky-700 underline-offset-4 hover:underline"
 					>take control of their chronic pain</a
 				>.
 
@@ -83,7 +91,7 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 					/>Book a call</button
 				>
 				<a
-					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-600 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-700 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>More about me</a
 				>
 			</div>
@@ -109,10 +117,10 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 				geographical data.
 				<br />
 				<br />
-				I was initially hired to build a dashboard to aid the team in visualizing
-				data collected in the field. In 3 short years, my responsibilities grew from
-				frontend tasks to product ownership. I delivered 4 geospatial applications
-				under a unified RouteLab Design System.
+				I was initially hired to build a dashboard to help the team visualize data
+				collected in the field. In 3 short years, my responsibilities grew from frontend
+				tasks to product ownership. I delivered 4 geospatial applications under a
+				unified RouteLab Design System.
 				<br />
 				<br />
 				RouteLab not only improved data accuracy, speed, and quality but it also
@@ -212,7 +220,7 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 		<ProjectSection
 			id="dexi"
 			title="Dexi is building the OS for dental clinics."
-			role="I led the user experience planning and design, and mentored the frontend team."
+			role="I led the UX planning & design, and mentored the frontend team."
 		>
 			<Image
 				loading="lazy"
@@ -241,13 +249,13 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 
 			<ProjectImage
 				slot="client-work"
-				sx="aspect-[16/10]"
+				sx="aspect-[16/10.4]"
 				src={TreatmentPlanning}
 				alt="Treatment planner"
 			/>
 			<ProjectImage
 				slot="client-work"
-				sx="aspect-[16/10]"
+				sx="aspect-[16/10.4]"
 				src={PatientScheduling}
 				alt="Patient scheduler"
 			/>
@@ -260,7 +268,7 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 		</ProjectSection>
 
 		<section
-			class="mx-auto max-w-xl border-dashed pb-12 pt-24 max-sm:text-lg md:border-x-px"
+			class="mx-auto flex max-w-xl flex-col gap-4 border-dashed py-24 max-sm:text-lg md:border-x-px"
 		>
 			<h2
 				class="pl-7 pr-20 text-5xl leading-none tracking-tighter md:pl-4 md:text-[3.5rem]"
@@ -295,7 +303,7 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 					/>Book a call</button
 				>
 				<a
-					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-600 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-700 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>More about me</a
 				>
 			</div>
@@ -305,7 +313,7 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 		<div class="mx-auto w-full max-w-xl md:flex md:justify-between md:px-4">
 			<div class="pb-24 md:pb-0">
 				<p>Find me on the internet</p>
-				<span class="flex gap-4 text-slate-300">
+				<span class="flex gap-4">
 					<a class="underline-offset-4 hover:underline">Email</a>
 					<a class="underline-offset-4 hover:underline">Linkedin</a>
 					<a class="underline-offset-4 hover:underline">Dribbble</a>
@@ -316,3 +324,32 @@ import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
 		</div>
 	</footer>
 </Layout>
+
+<style>
+	h1 > div {
+		animation-delay: 0;
+	}
+	h1 > div:nth-child(2) > div {
+		animation-delay: 0.1s;
+	}
+	h1 > div:nth-child(3) > div {
+		animation-delay: 0.25s;
+	}
+	.slide-up-fade-in {
+		animation: slide-up-fade-in 0.7s cubic-bezier(0.65, 0, 0.35, 1) both;
+	}
+
+	@keyframes slide-up-fade-in {
+		0% {
+			transform: translateY(100px);
+			opacity: 0;
+		}
+		60% {
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+</style>
