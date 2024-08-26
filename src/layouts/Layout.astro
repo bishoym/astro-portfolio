@@ -36,11 +36,14 @@ const {
 			></span><p class="mr-2 text-xs text-primary-foreground">
 				Currently taking on select projects
 			</p>
-			<button
-				class="rounded-3xl bg-sky-700 px-3 py-1 text-xs text-primary-foreground hover:bg-sky-700/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-				>Get in touch →</button
-			></Banner
-		>
+			<a href="mailto:hello@bishoym.com">
+				<button
+					class="rounded-3xl bg-sky-700 px-3 py-1 text-xs text-primary-foreground hover:bg-sky-700/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+					>Get in touch →</button
+				>
+			</a>
+		</Banner>
+
 		<slot />
 	</body>
 </html>

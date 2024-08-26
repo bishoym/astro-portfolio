@@ -44,16 +44,18 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 			slot="logo"
 		/>
 		<section
-			class="relative mx-auto flex max-w-screen-md flex-col justify-center gap-12 px-0 py-16 align-middle text-zinc-950"
+			class="relative mx-auto flex w-full max-w-screen-md flex-col gap-12 px-0 py-16 text-zinc-950 md:justify-center md:align-middle"
 		>
-			<div class="flex max-w-screen-lg flex-col items-center gap-2 text-lg">
-				<span class="flex flex-col items-center gap-0">
-					<p class="font-bold">Bishoy Maher</p>
-					<p>Creative Developer</p>
-				</span>
-				<!-- <p>✦</p> -->
+			<!-- <div
+				class="flex max-w-screen-lg flex-col gap-2 md:items-center md:text-lg"
+			> -->
+			<span class="flex flex-col gap-0 px-8 md:items-center md:px-0">
+				<p class="font-bold">Bishoy Maher</p>
+				<p>Creative Developer</p>
+			</span>
+			<!-- <p>✦</p> -->
 
-				<!-- <div
+			<!-- <div
 					class="mt-2 rounded-full border-px border-zinc-200 bg-white px-4 py-2"
 				>
 					<p class="text-xs font-semibold text-green-600">
@@ -63,21 +65,22 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 						Available for work
 					</p>
 				</div> -->
-			</div>
+			<!-- </div> -->
 
 			<h1
-				class="text-center font-serif text-7xl leading-none tracking-tighter transition-transform duration-700 ease-in-out"
+				class="px-8 font-serif text-5xl leading-tight tracking-tighter transition-transform duration-700 ease-in-out md:px-0 md:text-center md:text-7xl md:leading-none"
 			>
-				<span class="slide-up-fade-in block pt-4">Crafting a future</span>
-				<span class="slide-up-fade-in block pt-4 font-serif text-sky-600">
+				<span class="slide-up-fade-in pt-4 md:block">Crafting a future</span>
+				<span class="slide-up-fade-in pt-4 font-serif text-sky-600 md:block">
 					<em>worth waking up for,</em>
 				</span>
-				<span class="slide-up-fade-in block pt-1">one product at a time</span>
+				<span class="slide-up-fade-in pt-1 md:block">one product at a time</span
+				>
 			</h1>
 			<p class="text-center text-lg">✦</p>
 			<!-- <ImageStack /> -->
 
-			<p class="px-[7.5rem] text-4xl tracking-tight">
+			<p class="px-8 text-2xl tracking-tight md:px-[7.5rem] md:text-4xl">
 				I'm an engineer by trade, designer at heart, with over 4 years of
 				experience navigating complex domains to deliver compelling digital
 				products.
@@ -99,7 +102,9 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				tech that aligns with the UN's Sustainable Development Goals
 			</p>
 
-			<div class="flex gap-3 px-[7.5rem] pt-10 align-middle">
+			<div
+				class="flex flex-col gap-3 px-8 pt-10 align-middle md:flex-row md:px-[7.5rem]"
+			>
 				<button
 					class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 				>
@@ -115,7 +120,7 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				>
 				<a href="/about" class="w-full"
 					><button
-						class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+						class="w-full items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-flex"
 					>
 						More about me</button
 					></a
@@ -140,48 +145,44 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				/>
 
 				<Fragment slot="description">
-					<p class="pb-8 leading-7">
-						You know when something sucks, but you can't quite put your finger
-						on why? You can't make any sense of how it's running at the moment,
-						and you have no idea if your changes would actually make things
-						better?
+					<p class="pb-8 text-base leading-relaxed">
+						I joined the team in November 2019, fresh out of college, to help
+						tackle a pressing challenge: the lack of high-quality data hindering
+						the development of infrastructure projects in emerging economies.
+						TfC's mission is to bring a data-driven approach to the development
+						of informal transit systems across Africa. I was part of a team that
+						developed a unique set of tools to collect, visualize, and process
+						geographical data; battle-tested in some of Africa's densest urban
+						environments.
+						<br />
+						<br />
+						As a key member of the team, I focused on UX design and frontend development,
+						driving the creation of four geospatial applications under the unified
+						RouteLab Design System. One of my notable projects was developing a vehicle
+						detection and tracking system, which involved collecting and cleaning
+						a large vehicle dataset, training a custom image classifier, and deploying
+						it to a scalable micro-service architecture. I also accelerated the data
+						validation process by 40% with a web-based geoprocessing tool, leveraging
+						GPU power to process hundreds of thousands of geographic data points
+						simultaneously. Along the way we created many data-rich interactive dashboards
+						to enhance the project monitoring process for data collection projects.
 
 						<br />
 						<br />
-						That is the exact challenge faced by foreign investors when attempting
-						to implement projects in emerging economies. There is a distinct lack
-						of high quality data to inform much needed infrastructure projects.
-
-						<br />
-						<br />
-						That's where TfC comes in. Together, we developed a set of data tools
-						to aid in the collection, visualization, and processing of various spatial-temporal
-						data on public transit systems across Africa. This was the first step
-						on a journey towards bringing some order to the chaos found in many informal
-						transit systems across the continent.
-						<!-- On TfC's journey towards bringing order out of the chaos found in many
-						African countries' informal transit systems, we developed a set of data
-						tools to aid in the collection, visualization, and processing of
-						geographical data. -->
-						<br />
-						<br />
-						I was initially hired to build a dashboard to help the team visualize
-						data collected in the field. In 3 short years, my responsibilities grew
-						from frontend tasks to product ownership. I delivered 4 geospatial applications
-						under a unified RouteLab Design System.
-						<br />
-						<br />
-						RouteLab not only improved data accuracy, speed, and quality but it also
-						reduced traditional data collection costs by 75%. This made it the go-to
-						tool for large-scale data collection efforts by the World Bank, AFD,
-						GIZ, and the World Resources Institute.
+						The impact of our work was significant. RouteLab improved data accuracy,
+						speed, and quality, reducing traditional data collection costs by 75%.
+						This made it the go-to tool for large-scale data collection efforts by
+						major organizations like the World Bank, AFD, GIZ, and the World Resources
+						Institute. I'm proud to have played a key role in shaping the product
+						and driving its success.
 					</p>
 
 					<Testimonial
+						cite="https://www.linkedin.com/in/bishoymaher/"
 						avatarSrc={HazemFahmi}
 						name="Hazem Fahmi"
 						role="Data Analyst"
-						content="Bishoy combines solid technical knowledge, an eye for good design, and a remarkable organizational capacity."
+						content="Bishoy combines solid technical knowledge, an eye for good design, and a remarkable organizational capacity. Working alongside him and under his leadership on multiple projects, I've seen him exercise these qualities on technical and non-technical fronts, guiding and supporting the team, while staying focused and goal-driven. On many occasions, I've seen him very skillfully manage and align the visions of different stakeholders, always prioritizing clear communication, promptly identifying and clearing any ambiguities. Bishoy's skill and vision are valuable to any team he works with. Moreover, he is humble and supportive, and constantly sharing his learnings."
 					/>
 				</Fragment>
 
@@ -256,16 +257,28 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				/>
 
 				<Fragment slot="description">
-					<p class="pb-8">
-						Over the course of 2 years, we iterated and developed the
-						provider-facing portal multiple times, integrating with multiple
-						third-party services to provide a seamless experience for our users.
+					<p class="pb-8 text-base leading-relaxed">
+						I initially joined the team in October of 2021 as a frontend
+						engineer to overhaul the product checkout process and build a
+						customer experience portal, used internally at Flowly, to better
+						support their users. Since then my responsibilities expanded to
+						include a full range of both backend and frontend tasks. We
+						implemented integrations with Stripe, Shipstation, and Twilio to
+						provide various customer support functions.
+						<br />
+						<br />
+						Notable accomplishments include upgrading AWS Amplify and nearly 100
+						Lambda functions to meet SOC 2 requirements to acquire SOC 2 Type 1 certification;
+						reducing helpdesk response times by 50% with a two-way SMS chat module;
+						and contributing to a 10% increase in customer acquisition through multiple
+						secondary checkout flows for gifting, tiered users, and enterprise customers.
 					</p>
 					<Testimonial
+						cite="https://www.linkedin.com/in/bishoymaher/"
 						avatarSrc={JulienSoros}
 						name="Julien Soros"
 						role="CTO & Co-founder"
-						content="Bishoy is one of the best developers I've worked with. He's a quick learner and doesn't just complete the work assigned to him but actively thinks about how to improve things. I can't recommend him highly enough."
+						content="Bishoy is one of the best developers I've worked with. He's extremely organized and diligent which makes meetings and communication super efficient. For our company, he started off working on a frontend react portal but his role quickly grew to encompass a wide range of backend work as well. He's a quick learner and doesn't just complete the work assigned to him but actively thinks about how to improve things. He interfaced well with other team members and stakeholders and was a great team member. I can't recommend him highly enough."
 					/>
 				</Fragment>
 
@@ -300,16 +313,21 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 					slot="logo"
 				/>
 				<Fragment slot="description">
-					<p class="pb-8">
-						About a year ago, a friend of mine approached me with frustrations
-						about the state of dental practice management tools in the Egyptian
-						market. He was in the middle of setting up his clinic and didn't
-						feel like any of the solutions on the market met his needs exactly.
-						He was hell-bent on finding a solution though, even if he had to
-						build it himself. In the past 15 months, we went and did exactly
-						that. Going from idea, to designs, to real live code
+					<p class="pb-8 text-base leading-relaxed">
+						The journey began in June 2020, when my brother-in-law, a dentist,
+						struggled to find a practice management solution that met his needs.
+						He decided to build the solution himself, and I joined him on this
+						mission. Over 15 months, we transformed his idea into a reality,
+						launching our beta in August 2021.
+						<br />
+						<br />
+						My focus was on crafting a user-centered journey that streamlined different
+						workflows based the user's role. I championed an innovative approach
+						that separated tasks, allowing doctors to focus on patient care while
+						administrative staff handled logistics.
 					</p>
 					<Testimonial
+						cite="https://www.linkedin.com/in/bishoymaher/"
 						avatarSrc={EhabGeorge}
 						name="Ehab George"
 						role="CEO & Co-founder"
@@ -346,14 +364,16 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 		</div>
 
 		<section
-			class="mx-auto flex max-w-screen-sm flex-col gap-8 border-solid py-32 text-lg"
+			class="mx-auto flex w-full max-w-screen-sm flex-col gap-8 border-solid px-8 py-32 text-lg md:px-0"
 		>
-			<h2 class="text-center font-serif text-7xl leading-none tracking-tighter">
+			<h2
+				class="font-serif text-5xl leading-tight tracking-tighter md:text-center md:text-7xl md:leading-none"
+			>
 				Let&apos;s build a better future, <span
 					class="font-serif italic text-sky-600">together</span
 				>
 			</h2>
-			<p class="px-12">
+			<p class="md:px-12">
 				I am currently available for hire as an independent contractor.
 				<br />
 				<br />
@@ -365,7 +385,7 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				If that sounds like you, let&apos;s talk!
 			</p>
 
-			<div class="flex gap-3 px-12 align-middle">
+			<div class="flex flex-col gap-3 align-middle md:flex-row md:px-12">
 				<button
 					class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 				>
@@ -381,7 +401,7 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				>
 				<a href="/about" class="w-full"
 					><button
-						class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+						class="w-full whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-flex md:items-center md:justify-center"
 					>
 						More about me</button
 					></a
@@ -414,10 +434,22 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 		>
 			<div class="pb-24 md:pb-0">
 				<span class="flex gap-4">
-					<a class="underline-offset-4 hover:underline">Email</a>
-					<a class="underline-offset-4 hover:underline">Linkedin</a>
-					<a class="underline-offset-4 hover:underline">Dribbble</a>
-					<a class="underline-offset-4 hover:underline">Medium</a>
+					<a
+						class="underline-offset-4 hover:underline"
+						href="mailto:hello@bishoym.com">Email</a
+					>
+					<a
+						class="underline-offset-4 hover:underline"
+						href="https://www.linkedin.com/in/bishoymaher/">Linkedin</a
+					>
+					<a
+						class="underline-offset-4 hover:underline"
+						href="https://dribbble.com/bishoym">Dribbble</a
+					>
+					<a
+						class="underline-offset-4 hover:underline"
+						href="https://medium.com/@_hush">Medium</a
+					>
 				</span>
 				<p class="mt-1 text-xs font-bold uppercase text-secondary opacity-40">
 					Find me on the internet ↗️
@@ -448,9 +480,6 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 			opacity: 0;
 			-webkit-filter: blur(10px);
 		}
-		/* 60% {
-			opacity: 0;
-		} */
 		100% {
 			transform: translateY(0);
 			opacity: 1;

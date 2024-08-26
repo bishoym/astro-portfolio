@@ -7,7 +7,7 @@ import ImageStack from '@/components/ImageStack.astro';
 ---
 
 <Layout title="Origin Story | Bishoy Maher — User Experience Engineer">
-	<main class="relative flex flex-col rounded-2xl bg-[#fafafa]">
+	<main class="relative flex flex-col overflow-hidden rounded-2xl bg-[#fafafa]">
 		<Image
 			loading="eager"
 			src={DotGrid}
@@ -16,7 +16,7 @@ import ImageStack from '@/components/ImageStack.astro';
 			slot="logo"
 		/>
 		<section
-			class="relative mx-auto flex max-w-screen-md flex-col justify-center gap-12 px-0 py-16 align-middle text-zinc-950"
+			class="relative mx-auto flex w-full max-w-screen-md flex-col justify-center gap-12 px-8 py-16 align-middle text-zinc-950 md:px-0"
 		>
 			<div class="flex max-w-screen-lg flex-col items-center gap-2 text-lg">
 				<span class="flex flex-col items-center gap-0">
@@ -39,17 +39,17 @@ import ImageStack from '@/components/ImageStack.astro';
 			</div>
 
 			<h1
-				class="text-center font-serif text-7xl leading-none tracking-tighter transition-transform duration-700 ease-in-out"
+				class="text-center font-serif text-5xl leading-none tracking-tighter transition-transform duration-700 ease-in-out md:text-7xl"
 			>
-				<span class="slide-up-fade-in block pt-4">Born in Cairo</span>
-				<span class="slide-up-fade-in block pt-4 font-serif text-sky-600">
+				<span class="slide-up-fade-in pt-4 md:block">Born in Cairo</span>
+				<span class="slide-up-fade-in pt-4 font-serif text-sky-600 md:block">
 					<em>raised across the globe</em>
 				</span>
 				<!-- <span class="slide-up-fade-in block pt-1">one product at a time</span> -->
 			</h1>
 			<ImageStack />
 
-			<p class="px-[7.5rem] text-4xl tracking-tight">
+			<p class="px-8 text-2xl tracking-tight md:px-[7.5rem] md:text-4xl">
 				I'm an engineer by trade, designer at heart, with over 4 years of
 				experience navigating complex domains to deliver compelling digital
 				products.
@@ -71,7 +71,9 @@ import ImageStack from '@/components/ImageStack.astro';
 				tech that aligns with the UN's Sustainable Development Goals
 			</p>
 
-			<div class="flex gap-3 px-[7.5rem] pt-10 align-middle">
+			<div
+				class="flex flex-col gap-3 px-8 pt-10 align-middle md:flex-row md:px-[7.5rem]"
+			>
 				<button
 					class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 				>
@@ -87,7 +89,7 @@ import ImageStack from '@/components/ImageStack.astro';
 				>
 				<a href="/" class="w-full"
 					><button
-						class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+						class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>
 						View work</button
 					></a
