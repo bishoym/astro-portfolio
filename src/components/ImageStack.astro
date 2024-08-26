@@ -1,0 +1,263 @@
+---
+import { Image } from 'astro:assets';
+
+import BachataDance from '../assets/about-me/bachata-shines-festival.jpg';
+import BishoyConference from '../assets/about-me/bishoy-rwanda-conf.jpeg';
+import Cycling from '../assets/about-me/cycling.jpg';
+import DOACPodcast from '../assets/about-me/doac-podcast.jpg';
+import Duck from '../assets/about-me/duck-chez-gladines.jpg';
+import Pyramids from '../assets/about-me/pyramids.jpg';
+import CreativeAct from '../assets/about-me/the-creative-act-rick-rubin-cover.jpg';
+import TravelParis from '../assets/about-me/travel-paris.jpg';
+import Beach from '../assets/about-me/at-the-beach.jpg';
+
+interface Props {
+	// src: ImageMetadata;
+	// className: string;
+	// alt: string;
+}
+
+// const {  } = Astro.props;
+---
+
+<div class="group relative -mt-8 flex h-[800px] justify-center">
+	<!-- <Image
+		id="main"
+		alt="SCIP Conference in Rwanda"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 z-10 -ml-[153px] -mt-[206px] h-[412px] w-[306px] rounded-[2rem] object-cover shadow-2xl transition-all group-hover:-rotate-3 group-hover:scale-90"
+		data-taos-offset="300"
+		src={BishoyConference}
+	/> -->
+	<Image
+		id="main"
+		alt="SCIP Conference in Rwanda"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 z-10 -ml-[153px] -mt-[206px] h-[412px] w-[306px] animate-[slide-up-fade-in_700ms_ease-in-out_both,main_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover shadow-2xl"
+		data-taos-offset="300"
+		src={BishoyConference}
+	/>
+
+	<!-- <Image
+		id="center-left"
+		alt="Pyramids of Giza"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[156px] -mt-[46px] h-[109px] w-[109px] rotate-[10.27deg] rounded-[2rem] object-cover shadow-2xl blur-lg transition-transform duration-300 group-hover:-translate-x-[240px] group-hover:-rotate-12 group-hover:blur-0"
+		src={Pyramids}
+	/> -->
+	<Image
+		id="center-left"
+		alt="Pyramids of Giza"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[156px] -mt-[46px] h-[109px] w-[109px] rotate-[10.27deg] animate-[midl_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl blur-lg"
+		src={Pyramids}
+	/>
+	<!-- <Image
+		id="bottom-left"
+		alt="Most memorable dish: Magret de Canard at Chez Gladines"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[153px] -mt-[75px] h-[150px] w-[204px] rounded-[2rem] object-cover shadow-2xl blur-lg duration-300 group-hover:-translate-x-[200px] group-hover:translate-y-[280px] group-hover:rotate-[-27.86deg] group-hover:blur-0 group-hover:transition-transform"
+		src={Duck}
+	/> -->
+	<Image
+		id="bottom-left"
+		alt="Most memorable dish: Magret de Canard at Chez Gladines"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[153px] -mt-[75px] h-[150px] w-[204px] animate-[bl_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl blur-lg"
+		src={Duck}
+	/>
+	<!-- <Image
+		id="top-left"
+		alt="At the Eiffel Tower"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[153px] -mt-[206px] h-[219px] w-[219px] rotate-[-10deg] rounded-[2rem] object-cover shadow-2xl blur-lg duration-300 group-hover:-translate-x-[120px] group-hover:-translate-y-[120px] group-hover:rotate-[12deg] group-hover:blur-0"
+		src={TravelParis}
+	/> -->
+	<Image
+		id="top-left"
+		alt="At the Eiffel Tower"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[153px] -mt-[206px] h-[219px] w-[219px] rotate-[-10deg] animate-[tl_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl blur-lg"
+		src={TravelParis}
+	/>
+	<!-- <Image
+		id="top-left-farther"
+		alt="Coast of Alexandria"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[82px] -mt-[82px] h-[163px] w-[163px] rounded-[2rem] object-cover shadow-2xl duration-300 group-hover:-translate-x-[320px] group-hover:-translate-y-[320px] group-hover:rotate-[-15deg]"
+		src={Beach}
+	/> -->
+	<Image
+		id="top-left-farther"
+		alt="Coast of Alexandria"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[82px] -mt-[82px] h-[163px] w-[163px] animate-[tlf_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl"
+		src={Beach}
+	/>
+
+	<!-- <Image
+		id="top-right"
+		alt="Cycling Cairo's highways"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[77px] -mt-[168px] h-[295px] w-[219px] rotate-[19.5deg] rounded-[2rem] object-cover shadow-2xl blur-lg duration-300 group-hover:-translate-y-[220px] group-hover:translate-x-[120px] group-hover:rotate-[-8deg] group-hover:blur-0"
+		src={Cycling}
+	/> -->
+	<Image
+		id="top-right"
+		alt="Cycling Cairo's highways"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[77px] -mt-[168px] h-[295px] w-[219px] rotate-[19.5deg] animate-[tr_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl blur-lg"
+		src={Cycling}
+	/>
+
+	<!-- <Image
+		id="middle-right"
+		alt="Bachata dance at the Shines Festival in France"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[110px] -mt-[110px] h-[220px] w-[220px] rounded-[2rem] object-cover shadow-2xl duration-300 group-hover:-translate-y-[64px] group-hover:translate-x-[360px] group-hover:rotate-[13deg]"
+		src={BachataDance}
+	/> -->
+	<Image
+		id="middle-right"
+		alt="Bachata dance at the Shines Festival in France"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[110px] -mt-[110px] h-[220px] w-[220px] animate-[midr_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl"
+		src={BachataDance}
+	/>
+	<!-- <Image
+		id="bottom-right"
+		alt="Currently listening to: The Diary of a CEO Podcast"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[55px] -mt-[55px] h-[109px] w-[109px] rounded-[2rem] object-cover shadow-2xl duration-300 group-hover:translate-x-[160px] group-hover:translate-y-[280px] group-hover:rotate-[15deg]"
+		src={DOACPodcast}
+	/> -->
+	<Image
+		id="bottom-right"
+		alt="Currently listening to: The Diary of a CEO Podcast"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[55px] -mt-[55px] h-[109px] w-[109px] animate-[br_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl"
+		src={DOACPodcast}
+	/>
+	<!-- <Image
+		id="bottom-right-farther"
+		alt="Currently reading: The creative act by Rick Rubin"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[53px] mt-[50px] h-[163px] w-[163px] rotate-[-36.52deg] rounded-[2rem] object-cover shadow-2xl blur-lg duration-300 group-hover:translate-x-[256px] group-hover:translate-y-[200px] group-hover:rotate-[-15deg] group-hover:blur-0"
+		src={CreativeAct}
+	/> -->
+	<Image
+		id="bottom-right-farther"
+		alt="Currently reading: The creative act by Rick Rubin"
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		class="absolute left-1/2 top-1/2 -ml-[53px] mt-[50px] h-[163px] w-[163px] rotate-[-36.52deg] animate-[brf_300ms_ease-in-out_2.5s_both] rounded-[2rem] object-cover opacity-0 shadow-2xl blur-lg"
+		src={CreativeAct}
+	/>
+</div>
+
+<style>
+	@keyframes brf {
+		100% {
+			opacity: 1;
+			transform: translate(256px, 200px) rotate(-15deg);
+			-webkit-filter: blur(0);
+		}
+	}
+	@keyframes br {
+		100% {
+			opacity: 1;
+			transform: translate(160px, 280px) rotate(15deg);
+		}
+	}
+	@keyframes midr {
+		100% {
+			opacity: 1;
+			transform: translate(360px, -64px) rotate(13deg);
+		}
+	}
+	@keyframes tr {
+		100% {
+			opacity: 1;
+			transform: translate(120px, -220px) rotate(-8deg);
+			-webkit-filter: blur(0);
+		}
+	}
+	@keyframes tlf {
+		100% {
+			opacity: 1;
+			transform: translate(-320px, -320px) rotate(-15deg);
+		}
+	}
+	@keyframes tl {
+		100% {
+			opacity: 1;
+			transform: translate(-120px, -120px) rotate(12deg);
+			-webkit-filter: blur(0);
+		}
+	}
+	@keyframes bl {
+		100% {
+			opacity: 1;
+			transform: translate(-200px, 280px) rotate(-27.86deg);
+			-webkit-filter: blur(0);
+		}
+	}
+	@keyframes midl {
+		100% {
+			opacity: 1;
+			transform: translateX(-240px) rotate(-12deg);
+			-webkit-filter: blur(0);
+		}
+	}
+	@keyframes main {
+		100% {
+			transform: rotate(-3deg) scale(0.9, 0.9);
+		}
+	}
+
+	@keyframes slide-up-fade-in {
+		0% {
+			transform: translateY(30%);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+</style>

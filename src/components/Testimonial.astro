@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	avatarSrc: ImageMetadata;
+	name: string;
+	role: string;
+	content: string;
+}
+
+const { avatarSrc, name, role, content } = Astro.props;
+---
+
+<div class="flex gap-2 rounded-xl bg-zinc-100 p-8 pr-12 text-sm">
+	<pre class="text-4xl text-zinc-400">❝</pre>
+	<blockquote cite="" class="flex flex-col gap-8">
+		{content}
+
+		<div class="flex gap-2">
+			<Image src={avatarSrc} alt={`${name}, ${role}`} class="h-10 w-10" />
+			<div class="flex flex-col gap-0">
+				<span><b>{name}</b></span>
+				<span class="text-zinc-600">{role}</span>
+			</div>
+		</div>
+	</blockquote>
+</div>
