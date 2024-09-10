@@ -1,0 +1,55 @@
+---
+import { cn } from '@/utils/cn';
+import type { HTMLAttributes } from 'astro/types';
+import { cva, type VariantProps } from 'class-variance-authority';
+
+const button = cva(
+	'inline-flex items-center justify-center whitespace-nowrap rounded-d text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transition duration-200 ease-in-out hover:-translate-y-1 hover:shadow-sm',
+	{
+		variants: {
+			variant: {
+				default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+				destructive:
+					'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+				outline:
+					'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+				secondary:
+					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+				ghost: 'hover:bg-accent hover:text-accent-foreground',
+				link: 'text-primary underline-offset-4 hover:underline',
+				secondary2:
+					'w-full border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-flex'
+			},
+			size: {
+				default: 'h-10 px-4 py-2',
+				sm: 'h-9 rounded-md px-3',
+				lg: 'px-14 py-6 rounded-3xl hover:shadow-lg',
+				icon: 'h-10 w-10'
+			}
+		},
+		defaultVariants: {
+			variant: 'default',
+			size: 'default'
+		}
+	}
+);
+
+export interface Props
+	extends HTMLAttributes<'button'>,
+		VariantProps<typeof button> {}
+
+/**
+ * For Astro components, we recommend setting your defaultVariants within
+ * Astro.props (which are `undefined` by default)
+ */
+const {
+	class: className = '',
+	variant = 'default',
+	size = 'default',
+	...rest
+} = Astro.props;
+---
+
+<button class={cn(button({ variant, size }), className)} {...rest}>
+	<slot />
+</button>

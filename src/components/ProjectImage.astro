@@ -3,19 +3,26 @@ import { Image } from 'astro:assets';
 import { cn } from '@/utils/cn';
 
 interface Props {
+	class: string;
 	src: ImageMetadata;
-	sx: string;
 	alt: string;
 }
 
-const { src, sx, alt } = Astro.props;
+const { src, class: className = '', alt } = Astro.props;
 ---
 
 <div
 	class={cn(
-		'aspect-[9/19.2] max-w-full overflow-hidden rounded-2xl bg-gray-100 shadow-lg',
-		sx
+		'aspect-[9/19.2] max-h-full overflow-hidden rounded-2xl bg-gray-100 shadow-lg',
+		className
 	)}
 >
-	<Image alt={alt} loading="lazy" decoding="async" data-nimg="fill" src={src} />
+	<Image
+		alt={alt}
+		loading="lazy"
+		decoding="async"
+		data-nimg="fill"
+		src={src}
+		class="h-full w-full"
+	/>
 </div>

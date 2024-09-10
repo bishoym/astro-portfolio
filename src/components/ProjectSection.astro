@@ -5,9 +5,10 @@ interface Props {
 	id: string;
 	title: string;
 	role: string;
-	className?: string;
+	class?: string;
 	companyName: string;
 	companyColor?: string;
+	tags: string[];
 }
 
 const {
@@ -15,38 +16,70 @@ const {
 	title,
 	role,
 	id,
-	className = '',
-	companyColor
+	class: className = '',
+	companyColor,
+	tags = []
 } = Astro.props;
 ---
 
 <section id={id} class={cn('', className)}>
-	<div
-		class="mx-auto flex max-w-screen-md flex-col gap-8 px-8 pb-12 text-lg md:px-[7rem]"
-	>
+	<div class="mx-1/12 flex flex-col gap-8 text-lg md:px-20">
 		<slot name="logo" />
-		<h2 class="font-serif text-4xl text-gray-500">
+		<!-- <div class="flex flex-col gap-8  lg:flex-row lg:gap-12"> -->
+		<h2
+			class="w-full font-serif text-4xl leading-tight text-slate-500 md:text-[3.5rem]"
+		>
 			<i class="underline decoration-dotted" style={{ color: companyColor }}
 				>{companyName}</i
 			>
 			{title}
 			<span class="text-primary">{role}</span>
 		</h2>
-
-		<span class="">
-			<slot name="description" />
+		<!-- </div> -->
+		<!-- the project tags -->
+		<span class="flex flex-wrap items-start gap-4">
+			{
+				tags.map((tag) => (
+					<div class="flex-shrink-0 rounded-full border border-slate-300 px-4 py-1 text-slate-500">
+						{tag}
+					</div>
+				))
+			}
 		</span>
 	</div>
-
-	<div class="relative w-full">
+	<div class="relative w-full pt-4">
 		<div
-			class="-my-24 flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-24 [scrollbar-width:none]"
+			class="hide-scrollbar -my-24 flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-24"
 		>
 			<div
-				class="flex h-[28rem] flex-row justify-start gap-6 pl-6 last:pr-4 md:h-[34rem]"
+				class="mx-auto flex h-[28rem] flex-shrink-0 flex-row justify-start gap-4 pl-4 last:pr-4 md:h-[34rem] md:pl-20"
 			>
 				<slot name="client-work" />
 			</div>
 		</div>
 	</div>
+	<span class="grid grid-cols-12 place-items-center px-4 py-4 md:px-20">
+		<span class="hidden md:col-span-3 md:inline-block">
+			<slot name="testimonial" />
+		</span>
+		<span class="col-span-9 col-start-2 md:col-span-6 md:col-start-6">
+			<slot name="description" />
+		</span>
+		<span class="col-span-9 col-start-2 mt-16 md:col-span-3 md:hidden">
+			<slot name="testimonial" />
+		</span>
+	</span>
 </section>
+
+<style>
+	.hide-scrollbar {
+		/*FireFox*/
+		scrollbar-width: none;
+		/*IE10+*/
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+	}
+	.hide-scrollbar::-webkit-scrollbar {
+		/*Chrome, Safari, Edge*/
+		display: none;
+	}
+</style>

@@ -8,50 +8,57 @@ import ProjectImage from '@/components/ProjectImage.astro';
 import Testimonial from '@/components/Testimonial.astro';
 
 /** Asset imports */
-import TfCLogo from '../assets/tfc/tfc-emblem.svg';
-import HazemFahmi from '../assets/tfc/hazem-fahmi.png';
-import IdentificationHome from '../assets/tfc/identification-home-page.jpg';
-import ObserverDashboard from '../assets/tfc/observer-dashboard.png';
-import OnboardDashboard from '../assets/tfc/onboard-dashboard.png';
-import OnboardMobileTrack from '../assets/tfc/onboard-track.png';
-import SnapperH3 from '../assets/tfc/snapper-h3-grouped-surveys.png';
-import SnapperMatchLine from '../assets/tfc/snapper-match-line.png';
-import LensDetector from '../assets/tfc/custom-detector.png';
-import MobileFreqSurvey from '../assets/tfc/mobile-frequency-survey.png';
+import BishoySCIPConf from '@/assets/bishoy-rwanda-scip-conf-full.jpg';
+import TfCLogo from '@/assets/tfc/tfc-emblem.svg';
+import HazemFahmi from '@/assets/tfc/hazem-fahmi.png';
+import IdentificationHome from '@/assets/tfc/identification-home-page.jpg';
+import ObserverDashboard from '@/assets/tfc/observer-dashboard.png';
+import OnboardDashboard from '@/assets/tfc/onboard-dashboard.png';
+import OnboardMobileTrack from '@/assets/tfc/onboard-track.png';
+import SnapperH3 from '@/assets/tfc/snapper-h3-grouped-surveys.png';
+import SnapperMatchLine from '@/assets/tfc/snapper-match-line.png';
+import LensDetector from '@/assets/tfc/custom-detector.png';
+import MobileFreqSurvey from '@/assets/tfc/mobile-frequency-survey.png';
 
-import FlowlyLogo from '../assets/flowly/flowly-emblem.svg';
-import JulienSoros from '../assets/flowly/julien-soros.png';
-import EventsList from '../assets/flowly/events-list.png';
-import UserHomeFlowScore from '../assets/flowly/user-home-flow-score.png';
+import ToptalLogo from '@/assets/toptal/Toptal Emblem Blue RGB.svg';
+// import FlowlyLogo from '@/assets/toptal/flowly-emblem.svg';
+import JulienSoros from '@/assets/toptal/julien-soros.png';
+// import PeteZimm from '@/assets/toptal/pete-zimmerman.jpeg';
+import EventsList from '@/assets/toptal/events-list.png';
+import UserHomeFlowScore from '@/assets/toptal/user-home-flow-score.png';
+import MonitorPuck from '@/assets/toptal/lost-nomad-tracking.png';
+// import LoadingPucks from '@/assets/toptal/lost-nomad-loading.png';
+import VisualizePucks from '@/assets/toptal/lost-nomad-desktop.png';
 
-import DexiLogo from '../assets/dexi/dexi-emblem.svg';
-import EhabGeorge from '../assets/dexi/ehab-george.png';
-import DashboardDesktop from '../assets/dexi/dashboard-mockup.png';
-import DashboardMobile from '../assets/dexi/dashboard-mockup-mobile.png';
-import PatientScheduling from '../assets/dexi/patient-scheduling.webp';
-import TreatmentPlanning from '../assets/dexi/treatment-planning.webp';
+import DexiLogo from '@/assets/dexi/dexi-emblem.svg';
+import EhabGeorge from '@/assets/dexi/ehab-george.png';
+import DashboardDesktop from '@/assets/dexi/dashboard-mockup.png';
+import DashboardMobile from '@/assets/dexi/dashboard-mockup-mobile.png';
+import PatientScheduling from '@/assets/dexi/patient-scheduling.webp';
+import TreatmentPlanning from '@/assets/dexi/treatment-planning.webp';
 
-import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
+// import DotGrid from '@/assets/dot-grid-radial-smooth-min.svg';
 ---
 
 <Layout title="Bishoy Maher — User Experience Engineer">
 	<main class="relative flex flex-col rounded-2xl bg-[#fafafa]">
-		<Image
+		<!-- <Image
 			loading="eager"
 			src={DotGrid}
 			alt="dot grid background"
 			class="absolute inset-0 aspect-square w-full"
 			slot="logo"
-		/>
-		<section
+		/> -->
+		<!-- <section
 			class="relative mx-auto flex w-full max-w-screen-md flex-col gap-12 px-0 py-16 text-zinc-950 md:justify-center md:align-middle"
-		>
+		> -->
+		<section class="container mx-auto flex flex-col gap-10 pt-14 md:px-20">
 			<!-- <div
 				class="flex max-w-screen-lg flex-col gap-2 md:items-center md:text-lg"
 			> -->
-			<span class="flex flex-col gap-0 px-8 md:items-center md:px-0">
+			<span class="ml-2/12 md:ml-5/12 text-lg">
 				<p class="font-bold">Bishoy Maher</p>
-				<p>Creative Developer</p>
+				<p>User Experience Engineer</p>
 			</span>
 			<!-- <p>✦</p> -->
 
@@ -68,7 +75,7 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 			<!-- </div> -->
 
 			<h1
-				class="px-8 font-serif text-5xl leading-tight tracking-tighter transition-transform duration-700 ease-in-out md:px-0 md:text-center md:text-7xl md:leading-none"
+				class="md:ml-1/12 px-4 font-serif text-6xl leading-tight tracking-tighter transition-transform duration-700 ease-in-out md:px-0 md:text-8xl md:leading-none"
 			>
 				<span class="slide-up-fade-in pt-4 md:block">Crafting a future</span>
 				<span class="slide-up-fade-in pt-4 font-serif text-sky-600 md:block">
@@ -77,16 +84,14 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 				<span class="slide-up-fade-in pt-1 md:block">one product at a time</span
 				>
 			</h1>
-			<p class="text-center text-lg">✦</p>
+			<!-- <p class="text-center text-lg">✦</p> -->
 			<!-- <ImageStack /> -->
-
-			<p class="px-8 text-2xl tracking-tight md:px-[7.5rem] md:text-4xl">
+			<p class="ml-2/12 md:ml-5/12 mr-1/12 text-2xl text-slate-500 md:text-xl">
 				I'm an engineer by trade, designer at heart, with over 4 years of
 				experience navigating complex domains to deliver compelling digital
 				products.
+				<br />
 
-				<br />
-				<br />
 				My work has
 				<a href="#tfc" class="text-sky-700 underline-offset-4 hover:underline">
 					guided $1B+ in infrastructure investments</a
@@ -96,371 +101,458 @@ import DotGrid from '../assets/dot-grid-radial-smooth-min.svg';
 					>take control of their chronic pain</a
 				>.
 
-				<br />
-				<br />
-				I'm excited to partner with organizations that share my passion for building
-				tech that aligns with the UN's Sustainable Development Goals
+				<!-- <br />
+		<br />
+		I'm excited to partner with organizations that share my passion for building
+		tech that aligns with the UN's Sustainable Development Goals -->
 			</p>
 
-			<div
-				class="flex flex-col gap-3 px-8 pt-10 align-middle md:flex-row md:px-[7.5rem]"
-			>
-				<button
-					class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+			<div class="md:ml-5/12 flex flex-col gap-3 px-4 md:px-0 lg:flex-row">
+				<a
+					href="https://cal.com/bishoym/introduction-w-bishoy-maher"
+					class="w-full"
 				>
-					<!-- <Image
-						loading="eager"
-						alt="bishoy's face"
-						src={BishoyFace}
-						class="mr-2 rounded-full"
-						width={56}
-						height={56}
-					/>	 -->
-					Book a discovery call</button
-				>
-				<a href="/about" class="w-full"
-					><button
-						class="w-full items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-flex"
+					<button
+						class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>
-						More about me</button
+						<!-- <Image
+					loading="eager"
+					alt="bishoy's face"
+					src={BishoyFace}
+					class="mr-2 rounded-full"
+					width={56}
+					height={56}
+				/> -->
+						Book a discovery call <span class="ml-4">→</span></button
+					>
+				</a>
+				<a href="mailto:hello@bishoym.com" class="w-full"
+					><button
+						class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-3xl border border-transparent bg-transparent px-14 py-6 text-lg font-medium text-secondary-foreground ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:border hover:border-input hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 lg:w-fit"
+					>
+						Send me an email</button
 					></a
 				>
 			</div>
 		</section>
 
-		<div class="pt-32">
-			<ProjectSection
-				id="tfc"
-				companyColor="#113BB8"
-				companyName="Transport for Cairo"
-				title="is a boutique consultancy keeping the next 100 mega-cities moving."
-				role="I led RouteLab's product design & development."
+		<section class="px-4 pt-12 md:px-20">
+			<Image
+				loading="eager"
+				alt="bishoy's face"
+				src={BishoySCIPConf}
+				class="aspect-portrait w-full rounded-3xl object-cover shadow-2xl md:aspect-video"
+			/>
+
+			<p
+				class="ml-2/12 md:ml-5/12 md:mr-2/12 pb-16 pt-8 text-3xl font-semibold leading-tight tracking-tight text-slate-500 md:pr-10 md:text-5xl"
 			>
+				I’m excited to partner with organizations that fight climate change,
+				support health & wellness, or improve access to education
+			</p>
+		</section>
+
+		<ProjectSection
+			class="flex flex-col gap-8 pt-40"
+			id="tfc"
+			companyColor="#113BB8"
+			companyName="Transport for Cairo"
+			title="is a boutique consultancy keeping the next 100 mega-cities moving."
+			role="I led RouteLab's product design & development."
+			tags={[
+				'Zero -> One',
+				'Frontend Development',
+				'Product & Design Strategy'
+			]}
+		>
+			<div
+				slot="logo"
+				class="shadow-icon relative size-12 overflow-hidden rounded-2xl bg-white p-3 md:size-16"
+			>
+				<div
+					class="absolute inset-0 h-full w-full bg-gradient-to-t from-zinc-700/20 via-white/0 to-white/15"
+				>
+				</div>
 				<Image
-					loading="eager"
+					loading="lazy"
 					src={TfCLogo}
 					alt="Transport for Cairo logo"
-					class="aspect-square w-12 rounded-lg bg-white p-2 shadow-lg"
-					slot="logo"
+					class="relative z-10"
 				/>
-
-				<Fragment slot="description">
-					<p class="pb-8 text-base leading-relaxed">
-						I joined the team in November 2019, fresh out of college, to help
-						tackle a pressing challenge: the lack of high-quality data hindering
-						the development of infrastructure projects in emerging economies.
-						TfC's mission is to bring a data-driven approach to the development
-						of informal transit systems across Africa. I was part of a team that
-						developed a unique set of tools to collect, visualize, and process
-						geographical data; battle-tested in some of Africa's densest urban
-						environments.
-						<br />
-						<br />
-						As a key member of the team, I focused on UX design and frontend development,
-						driving the creation of four geospatial applications under the unified
-						RouteLab Design System. One of my notable projects was developing a vehicle
-						detection and tracking system, which involved collecting and cleaning
-						a large vehicle dataset, training a custom image classifier, and deploying
-						it to a scalable micro-service architecture. I also accelerated the data
-						validation process by 40% with a web-based geoprocessing tool, leveraging
-						GPU power to process hundreds of thousands of geographic data points
-						simultaneously. Along the way we created many data-rich interactive dashboards
-						to enhance the project monitoring process for data collection projects.
-
-						<br />
-						<br />
-						The impact of our work was significant. RouteLab improved data accuracy,
-						speed, and quality, reducing traditional data collection costs by 75%.
-						This made it the go-to tool for large-scale data collection efforts by
-						major organizations like the World Bank, AFD, GIZ, and the World Resources
-						Institute. I'm proud to have played a key role in shaping the product
-						and driving its success.
-					</p>
-
-					<Testimonial
-						cite="https://www.linkedin.com/in/bishoymaher/"
-						avatarSrc={HazemFahmi}
-						name="Hazem Fahmi"
-						role="Data Analyst"
-						content="Bishoy combines solid technical knowledge, an eye for good design, and a remarkable organizational capacity. Working alongside him and under his leadership on multiple projects, I've seen him exercise these qualities on technical and non-technical fronts, guiding and supporting the team, while staying focused and goal-driven. On many occasions, I've seen him very skillfully manage and align the visions of different stakeholders, always prioritizing clear communication, promptly identifying and clearing any ambiguities. Bishoy's skill and vision are valuable to any team he works with. Moreover, he is humble and supportive, and constantly sharing his learnings."
-					/>
-				</Fragment>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[9/19.2]"
-					src={IdentificationHome}
-					alt="Observer mobile app conducting an identification survey"
-				/>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[15.3/10]"
-					src={ObserverDashboard}
-					alt="Observer web dashboard"
-				/>
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[9/17.8]"
-					src={OnboardMobileTrack}
-					alt="Observer mobile app conducting an onboard survey"
-				/>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[20/9]"
-					src={OnboardDashboard}
-					alt="Observer onboard survey web dashboard"
-				/>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[9/17.8]"
-					src={MobileFreqSurvey}
-					alt="Observer mobile app conducting a frequency survey"
-				/>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[5.2/3]"
-					src={SnapperH3}
-					alt="Observer Onboard Survey Web Dashboard"
-				/>
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[19.3/9]"
-					src={SnapperMatchLine}
-					alt="Snapper Web GIS Editor"
-				/>
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[4.2/3]"
-					src={LensDetector}
-					alt="Custom trained YOLOv3 model detecting microbuses, motorcycles, and trucks"
-				/>
-			</ProjectSection>
-		</div>
-		<div class="pt-32">
-			<ProjectSection
-				companyName="Flowly"
-				companyColor="#8CBBF2"
-				id="flowly"
-				title="is a virtual clinic helping patients manage chronic pain & anxiety from the comfort of their home."
-				role="We partnered to deliver a seamless experience for our healthcare providers."
-			>
-				<Image
-					loading="lazy"
-					src={FlowlyLogo}
-					alt="Flowly logo"
-					class="aspect-square w-12 rounded-lg bg-white p-2 shadow-lg"
-					slot="logo"
-				/>
-
-				<Fragment slot="description">
-					<p class="pb-8 text-base leading-relaxed">
-						I initially joined the team in October of 2021 as a frontend
-						engineer to overhaul the product checkout process and build a
-						customer experience portal, used internally at Flowly, to better
-						support their users. Since then my responsibilities expanded to
-						include a full range of both backend and frontend tasks. We
-						implemented integrations with Stripe, Shipstation, and Twilio to
-						provide various customer support functions.
-						<br />
-						<br />
-						Notable accomplishments include upgrading AWS Amplify and nearly 100
-						Lambda functions to meet SOC 2 requirements to acquire SOC 2 Type 1 certification;
-						reducing helpdesk response times by 50% with a two-way SMS chat module;
-						and contributing to a 10% increase in customer acquisition through multiple
-						secondary checkout flows for gifting, tiered users, and enterprise customers.
-					</p>
-					<Testimonial
-						cite="https://www.linkedin.com/in/bishoymaher/"
-						avatarSrc={JulienSoros}
-						name="Julien Soros"
-						role="CTO & Co-founder"
-						content="Bishoy is one of the best developers I've worked with. He's extremely organized and diligent which makes meetings and communication super efficient. For our company, he started off working on a frontend react portal but his role quickly grew to encompass a wide range of backend work as well. He's a quick learner and doesn't just complete the work assigned to him but actively thinks about how to improve things. He interfaced well with other team members and stakeholders and was a great team member. I can't recommend him highly enough."
-					/>
-				</Fragment>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[16/10]"
-					src={EventsList}
-					alt="Flowly portal, managing events"
-				/>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[17/10]"
-					src={UserHomeFlowScore}
-					alt="Flowly portal, user homepage"
-				/>
-			</ProjectSection>
-		</div>
-		<div class="pt-32">
-			<ProjectSection
-				companyName="Dexi"
-				companyColor="#4498F9"
-				id="dexi"
-				title="is building the OS for dental clinics."
-				role="I led the UX planning & design, and mentored the frontend team."
-			>
-				<Image
-					loading="lazy"
-					src={DexiLogo}
-					alt="Dexi logo"
-					class="aspect-square w-12 rounded-lg bg-white p-2 shadow-lg"
-					slot="logo"
-				/>
-				<Fragment slot="description">
-					<p class="pb-8 text-base leading-relaxed">
-						The journey began in June 2020, when my brother-in-law, a dentist,
-						struggled to find a practice management solution that met his needs.
-						He decided to build the solution himself, and I joined him on this
-						mission. Over 15 months, we transformed his idea into a reality,
-						launching our beta in August 2021.
-						<br />
-						<br />
-						My focus was on crafting a user-centered journey that streamlined different
-						workflows based the user's role. I championed an innovative approach
-						that separated tasks, allowing doctors to focus on patient care while
-						administrative staff handled logistics.
-					</p>
-					<Testimonial
-						cite="https://www.linkedin.com/in/bishoymaher/"
-						avatarSrc={EhabGeorge}
-						name="Ehab George"
-						role="CEO & Co-founder"
-						content="Bishoy was a real blessing to our team. His natural sense for the business needs, and ability to translate that to a design vision, allowed us to develop a user flow that was truly disruptive."
-					/>
-				</Fragment>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[9/18.5]"
-					src={DashboardMobile}
-					alt="Mobile responsive view of the Dexi dashboard"
-				/>
-
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[16/10.4]"
-					src={TreatmentPlanning}
-					alt="Treatment planner"
-				/>
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[16/10.4]"
-					src={PatientScheduling}
-					alt="Patient scheduler"
-				/>
-				<ProjectImage
-					slot="client-work"
-					sx="aspect-[16.2/10]"
-					src={DashboardDesktop}
-					alt="Desktop view of the Dexi dashboard"
-				/>
-			</ProjectSection>
-		</div>
-
-		<section
-			class="mx-auto flex w-full max-w-screen-sm flex-col gap-8 border-solid px-8 py-32 text-lg md:px-0"
-		>
-			<h2
-				class="font-serif text-5xl leading-tight tracking-tighter md:text-center md:text-7xl md:leading-none"
-			>
-				Let&apos;s build a better future, <span
-					class="font-serif italic text-sky-600">together</span
-				>
-			</h2>
-			<p class="md:px-12">
-				I am currently available for hire as an independent contractor.
+			</div>
+			<Testimonial
+				slot="testimonial"
+				textColor="text-primary"
+				cite="https://www.linkedin.com/in/bishoymaher/"
+				avatarSrc={HazemFahmi}
+				name="Hazem Fahmi"
+				role="Data Analyst, Transport for Cairo"
+				content="Bishoy combines solid technical knowledge, an eye for good design, and a remarkable organizational capacity. Working alongside him and under his leadership on multiple projects, I've seen him exercise these qualities on technical and non-technical fronts, guiding and supporting the team, while staying focused and goal-driven. On many occasions, I've seen him very skillfully manage and align the visions of different stakeholders, always prioritizing clear communication, promptly identifying and clearing any ambiguities."
+			/>
+			<p slot="description" class="pb-8 text-base leading-relaxed">
+				I joined the team in November 2019, fresh out of college, to help tackle
+				a pressing challenge: the lack of high-quality data hindering the
+				development of infrastructure projects in emerging economies. TfC's
+				mission is to bring a data-driven approach to the development of
+				informal transit systems across Africa. I was part of a team that
+				developed a unique set of tools to collect, visualize, and process
+				geographical data; battle-tested in some of Africa's densest urban
+				environments.
 				<br />
 				<br />
-				I can only take on a limited number of projects each year. For this reason,
-				I choose to work exclusively with companies that fight climate change, support
-				health and wellness, or improve access to education.
+				As a key member of the team, I focused on UX design and frontend development,
+				driving the creation of four geospatial applications under the unified RouteLab
+				Design System. One of my notable projects was developing a vehicle detection
+				and tracking system, which involved collecting and cleaning a large vehicle
+				dataset, training a custom image classifier, and deploying it to a scalable
+				micro-service architecture. I also accelerated the data validation process
+				by 40% with a web-based geoprocessing tool, leveraging GPU power to process
+				hundreds of thousands of geographic data points simultaneously. Along the
+				way we created many data-rich interactive dashboards to enhance the project
+				monitoring process for data collection projects.
+
 				<br />
 				<br />
-				If that sounds like you, let&apos;s talk!
+				The impact of our work was significant. RouteLab improved data accuracy,
+				speed, and quality, reducing traditional data collection costs by 75%. This
+				made it the go-to tool for large-scale data collection efforts by major organizations
+				like the World Bank, AFD, GIZ, and the World Resources Institute. I'm proud
+				to have played a key role in shaping the product and driving its success.
 			</p>
 
-			<div class="flex flex-col gap-3 align-middle md:flex-row md:px-12">
-				<button
-					class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[9/19.2]"
+				src={IdentificationHome}
+				alt="Observer mobile app conducting an identification survey"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[15.3/10]"
+				src={ObserverDashboard}
+				alt="Observer web dashboard"
+			/>
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[9/17.8]"
+				src={OnboardMobileTrack}
+				alt="Observer mobile app conducting an onboard survey"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[20/9]"
+				src={OnboardDashboard}
+				alt="Observer onboard survey web dashboard"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[9/17.8]"
+				src={MobileFreqSurvey}
+				alt="Observer mobile app conducting a frequency survey"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[5.2/3]"
+				src={SnapperH3}
+				alt="Observer Onboard Survey Web Dashboard"
+			/>
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[19.3/9]"
+				src={SnapperMatchLine}
+				alt="Snapper Web GIS Editor"
+			/>
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[4.2/3]"
+				src={LensDetector}
+				alt="Custom trained YOLOv3 model detecting microbuses, motorcycles, and trucks"
+			/>
+		</ProjectSection>
+
+		<ProjectSection
+			class="flex flex-col gap-8 pt-40"
+			companyName="Dexi"
+			companyColor="#4498F9"
+			id="dexi"
+			title="is building the OS for dental clinics."
+			role="I led the user experience planning & design, and mentored the frontend team."
+			tags={['Zero -> One', 'UX Planning', 'UI Design', 'Product Strategy']}
+		>
+			<div
+				slot="logo"
+				class="shadow-icon relative size-16 overflow-hidden rounded-2xl bg-white p-4"
+			>
+				<div
+					class="absolute inset-0 h-full w-full bg-opacity-10 bg-gradient-to-t from-zinc-700/20 via-white/0 to-white/15"
 				>
-					<!-- <Image
+				</div>
+				<Image loading="lazy" src={DexiLogo} alt="Dexi logo" />
+			</div>
+			<!-- <Image
+			loading="lazy"
+			src={DexiLogo}
+			alt="Dexi logo"
+			class="size-12 rounded-lg bg-white p-2 shadow-lg"
+			slot="logo"
+		/> -->
+			<Testimonial
+				slot="testimonial"
+				textColor="text-primary"
+				cite="https://www.linkedin.com/in/bishoymaher/"
+				avatarSrc={EhabGeorge}
+				name="Ehab George"
+				role="CEO & Co-founder, Dexi"
+				content="Bishoy was a real blessing to our team. His natural sense for the business needs, and ability to translate that to a design vision, allowed us to develop a user flow that was truly disruptive."
+			/>
+			<p slot="description" class="pb-8 text-base leading-relaxed">
+				The journey began in June 2020, when my brother-in-law, a dentist,
+				struggled to find a practice management solution that met his needs. The
+				market had one viable option at the time, which was under-maintained and
+				feature-sparse. Competitors also seemed to quickly lose the willpower or
+				resources to build an alternative. As such he decided the only way a
+				solution was going to exist was if he built it himself. I joined him on
+				this mission and over the course of 15 months we transformed his idea
+				into a reality, launching our beta in August 2021.
+				<br />
+				<br />
+				My focus was on crafting a user-centered journey that streamlined different
+				workflows based the user's role. I championed an innovative approach that
+				separated tasks, allowing doctors to focus on patient care while administrative
+				staff handled logistics.
+			</p>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[9/18.5]"
+				src={DashboardMobile}
+				alt="Mobile responsive view of the Dexi dashboard"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[16/10.4]"
+				src={TreatmentPlanning}
+				alt="Treatment planner"
+			/>
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[16/10.4]"
+				src={PatientScheduling}
+				alt="Patient scheduler"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[16.2/10]"
+				src={DashboardDesktop}
+				alt="Desktop view of the Dexi dashboard"
+			/>
+		</ProjectSection>
+		<ProjectSection
+			class="flex flex-col gap-8 pt-40"
+			companyName="Toptal"
+			companyColor="#204ecf"
+			id="toptal"
+			title="is an exclusive network of the top 3% of freelance talent in the world."
+			role="I delivered 3 projects in under 3 years."
+			tags={['Prototyping', 'Frontend Development', 'UI Design']}
+		>
+			<div
+				slot="logo"
+				class="shadow-icon relative size-16 overflow-hidden rounded-2xl bg-white p-3"
+			>
+				<div
+					class="absolute inset-0 h-full w-full bg-opacity-10 bg-gradient-to-t from-zinc-700/20 via-white/0 to-white/15"
+				>
+				</div>
+				<Image loading="lazy" src={ToptalLogo} alt="Toptal logo" />
+			</div>
+			<!-- <Image
+			loading="lazy"
+			src={ToptalLogo}
+			alt="Toptal logo"
+			class="size-12 rounded-lg bg-white p-2 shadow-lg"
+			slot="logo"
+		/> -->
+			<div slot="testimonial" class="flex flex-col gap-20">
+				<Testimonial
+					textColor="text-primary"
+					cite="https://www.linkedin.com/in/bishoymaher/"
+					avatarSrc={JulienSoros}
+					name="Julien Soros"
+					role="CTO & Co-founder, Flowly"
+					content="Bishoy is extremely organized and diligent which makes meetings and communication super efficient. He started off working on a frontend portal, but his role quickly grew to encompass a wide range of backend work as well. He's a quick learner and doesn't just complete the work assigned to him but actively thinks about how to improve things. I can't recommend him highly enough."
+				/>
+				<!-- <Testimonial
+				textColor="text-primary"
+				cite="https://www.linkedin.com/in/bishoymaher/"
+				avatarSrc={PeteZimm}
+				name="Pete Zimmerman"
+				role="CEO, Lost Nomad Brewery"
+				content="Bishoy is the epitome of a “fire and forget” type of engineer. He engages on a personal level to fully understand the user stories and quickly organizes a way ahead. He encounters problems along the way and solves them (or adapts around them) with seeming ease. It’s always refreshing to work with someone like Bishoy, and in addition to being impressed with his skills I should also note that he’s flat out a good partner for any project."
+			/> -->
+			</div>
+			<p slot="description" class="pb-8 text-base leading-relaxed">
+				At Toptal, I've had the pleasure of collaborating with clients from all
+				over the world. My longest running contract is with Flowly, a virtual
+				clinic helping patients manage chronic pain & anxiety from the comfort
+				of their home. I joined them in October of 2021 as a frontend engineer
+				to overhaul the product checkout process and build a customer experience
+				portal, used internally, to better support their users. Since then my
+				responsibilities expanded to include a full range of both backend and
+				frontend tasks. We implemented integrations with Stripe, Shipstation,
+				and Twilio to provide various customer support functions.
+				<br />
+				<br />
+				Notable accomplishments include upgrading AWS Amplify and nearly 100 Lambda
+				functions to meet SOC 2 requirements to acquire SOC 2 Type 1 certification;
+				reducing helpdesk response times by 50% with a two-way SMS chat module; and
+				contributing to a 10% increase in customer acquisition through multiple secondary
+				checkout flows for gifting, tiered users, and enterprise customers.
+				<br />
+				<br />
+				Other clients have hired me for various data visualization experience & expertise
+				working with maps.
+			</p>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[16/10]"
+				src={EventsList}
+				alt="Flowly portal, managing events"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[17/10]"
+				src={UserHomeFlowScore}
+				alt="Flowly portal, user homepage"
+			/>
+
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[17/10]"
+				src={VisualizePucks}
+				alt="PuckJS Tracker, Visualize movements page"
+			/>
+			<ProjectImage
+				slot="client-work"
+				class="aspect-[1.1/2]"
+				src={MonitorPuck}
+				alt="PuckJS Tracker, Live monitoring page"
+			/>
+		</ProjectSection>
+
+		<div class="relative overflow-hidden">
+			<!-- <Image
+				loading="lazy"
+				src={DotGrid}
+				alt="dot grid background"
+				class="absolute -bottom-3/4 aspect-square w-full opacity-60"
+				slot="logo"
+			/> -->
+			<section
+				class="md:mx-1/12 flex flex-col gap-10 px-4 pb-16 pt-32 lg:container md:px-20 lg:mx-auto"
+			>
+				<h2 class="font-serif text-6xl tracking-tighter md:text-8xl">
+					Let&apos;s build a better <br class="hidden md:block" /> future, <em
+						class="font-serif italic text-sky-600">together</em
+					>
+				</h2>
+				<p class="ml-2/12 md:ml-5/12 text-lg">
+					I am currently available for hire as an independent contractor.
+					<br />
+					<br />
+					I can only take on a limited number of projects each year. For this reason,
+					I choose to work exclusively with companies that share my passion for building
+					tech that aligns with the UN's Sustainable Development Goals.
+					<br />
+					<br />
+					If that sounds like you, let&apos;s talk!
+				</p>
+
+				<div class="md:ml-5/12 flex flex-col gap-4 pb-4 md:gap-3 lg:flex-row">
+					<a
+						href="https://cal.com/bishoym/introduction-w-bishoy-maher"
+						class="w-full"
+					>
+						<button
+							class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+						>
+							<!-- <Image
 						loading="eager"
 						alt="bishoy's face"
 						src={BishoyFace}
 						class="mr-2 rounded-full"
 						width={56}
 						height={56}
-					/>	 -->
-					Book a discovery call</button
-				>
-				<a href="/about" class="w-full"
-					><button
-						class="w-full whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-flex md:items-center md:justify-center"
+					/> -->
+							Book a discovery call <span class="ml-4">→</span></button
+						>
+					</a>
+					<a href="mailto:hello@bishoym.com" class="w-full"
+						><button
+							class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-3xl border border-transparent bg-transparent px-14 py-6 text-lg font-medium text-secondary-foreground ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:border hover:border-input hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 lg:w-fit"
+						>
+							Send me an email</button
+						></a
 					>
-						More about me</button
-					></a
-				>
-			</div>
-			<!-- <div class="flex justify-center gap-3 pt-10 align-middle">
-				<button
-					class="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-2 py-2 pr-4 text-sm font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-				>
-					<Image
-						loading="eager"
-						alt="bishoy's face"
-						src={BishoyFace}
-						class="mr-2 rounded-full"
-						width={28}
-						height={28}
-					/>Book a call</button
-				>
-				<a
-					href="/about"
-					class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-700 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-					>More about me</a
-				>
-			</div> -->
-		</section>
-	</main>
-	<footer class="min-h-56 flex-1 bg-primary pt-8 text-secondary max-md:px-7">
-		<div
-			class="mx-auto w-full max-w-screen-sm md:flex md:justify-between md:px-6"
-		>
-			<div class="pb-24 md:pb-0">
-				<span class="flex gap-4">
-					<a
-						class="underline-offset-4 hover:underline"
-						href="mailto:hello@bishoym.com">Email</a
+				</div>
+				<!-- <div class="md:ml-4/12 flex flex-col gap-3 align-middle md:flex-row">
+					<button
+						class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+					>
+						
+						Book a discovery call <span class="ml-4">→</span></button
+					>
+					<a href="/about" class="w-full"
+						><button
+							class="w-full whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-flex md:items-center md:justify-center"
+						>
+							More about me</button
+						></a
+					>
+				</div> -->
+				<!-- <div class="flex justify-center gap-3 pt-10 align-middle">
+					<button
+						class="inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-2 py-2 pr-4 text-sm font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+					>
+						<Image
+							loading="eager"
+							alt="bishoy's face"
+							src={BishoyFace}
+							class="mr-2 rounded-full"
+							width={28}
+							height={28}
+						/>Book a call</button
 					>
 					<a
-						class="underline-offset-4 hover:underline"
-						href="https://www.linkedin.com/in/bishoymaher/">Linkedin</a
+						href="/about"
+						class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium text-sky-700 underline-offset-4 ring-offset-background transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+						>More about me</a
 					>
-					<a
-						class="underline-offset-4 hover:underline"
-						href="https://dribbble.com/bishoym">Dribbble</a
-					>
-					<a
-						class="underline-offset-4 hover:underline"
-						href="https://medium.com/@_hush">Medium</a
-					>
-				</span>
-				<p class="mt-1 text-xs font-bold uppercase text-secondary opacity-40">
-					Find me on the internet ↗️
-				</p>
-			</div>
-			<aside class="pb-10">Working remote from Cairo, Egypt</aside>
+				</div> -->
+			</section>
 		</div>
-	</footer>
+	</main>
 </Layout>
 
 <style>
+	.shadow-icon {
+		box-shadow:
+			0 2px 12px #00000005,
+			0 4px 8px #00000008,
+			0 2px 4px #0000000a,
+			0 1px 2px #0000000d,
+			0 1px #0000000f,
+			0 0 0 0.2375em #00000005,
+			0 24px 48px #00000014;
+	}
 	h1 > span {
 		animation-delay: 0;
 	}

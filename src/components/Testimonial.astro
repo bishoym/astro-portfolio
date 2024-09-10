@@ -1,4 +1,5 @@
 ---
+import { cn } from '@/utils/cn';
 import { Image } from 'astro:assets';
 
 interface Props {
@@ -7,23 +8,39 @@ interface Props {
 	role: string;
 	content: string;
 	cite: string;
+	bgColor?: string;
+	textColor?: string;
+	class?: string;
 }
 
-const { avatarSrc, name, role, content, cite } = Astro.props;
+const {
+	avatarSrc,
+	name,
+	role,
+	content,
+	cite,
+	bgColor,
+	textColor,
+	class: className
+} = Astro.props;
 ---
 
 <div
-	class="flex flex-col gap-2 rounded-xl bg-zinc-100 p-8 pr-12 text-sm md:flex-row"
+	class={cn('flex flex-col text-sm bg-transparent py-8', bgColor, className)}
 >
-	<pre class="text-4xl text-zinc-400">❝</pre>
-	<blockquote cite={cite} class="flex flex-col gap-8">
-		{content}
+	<pre class="-ml-4 text-9xl leading-3 text-slate-100">❝</pre>
+	<blockquote cite={cite} class={cn('flex flex-col gap-8', textColor)}>
+		<span class="pr-3 font-mono">{content}</span>
 
-		<div class="flex gap-2">
-			<Image src={avatarSrc} alt={`${name}, ${role}`} class="h-10 w-10" />
-			<div class="flex flex-col gap-0">
+		<div class="flex items-center gap-2">
+			<Image
+				src={avatarSrc}
+				alt={`${name}, ${role}`}
+				class="size-8 rounded-full"
+			/>
+			<div class="flex flex-col gap-0 text-foreground">
 				<span><b>{name}</b></span>
-				<span class="text-zinc-600">{role}</span>
+				<span class="text-sm text-slate-500">{role}</span>
 			</div>
 		</div>
 	</blockquote>

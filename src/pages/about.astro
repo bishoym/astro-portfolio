@@ -1,9 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 
+/** Local imports */
 import Layout from '@/layouts/Layout.astro';
-import DotGrid from '@/assets/dot-grid-radial-smooth-min.svg';
 import ImageStack from '@/components/ImageStack.astro';
+
+/** Asset imports */
+import DotGrid from '@/assets/dot-grid-radial-smooth-min.svg';
 ---
 
 <Layout title="Origin Story | Bishoy Maher — User Experience Engineer">
@@ -16,7 +19,7 @@ import ImageStack from '@/components/ImageStack.astro';
 			slot="logo"
 		/>
 		<section
-			class="relative mx-auto flex w-full max-w-screen-md flex-col justify-center gap-12 px-8 py-16 align-middle text-zinc-950 md:px-0"
+			class="relative mx-auto flex w-full max-w-screen-md flex-col justify-center gap-12 px-0 py-16 align-middle text-zinc-950"
 		>
 			<div class="flex max-w-screen-lg flex-col items-center gap-2 text-lg">
 				<span class="flex flex-col items-center gap-0">

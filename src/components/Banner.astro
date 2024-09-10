@@ -1,9 +1,15 @@
 ---
-interface Props {}
+import { cn } from '@/utils/cn';
 
-// const {  } = Astro.props;
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
 ---
 
-<aside class="flex items-center justify-center bg-primary py-2">
+<aside
+	class={cn('flex items-center justify-center bg-primary py-2', className)}
+>
 	<slot />
 </aside>
