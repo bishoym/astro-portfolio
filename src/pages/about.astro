@@ -78,6 +78,7 @@ import DotGrid from '@/assets/dot-grid-radial-smooth-min.svg';
 				class="flex flex-col gap-3 px-8 pt-10 align-middle md:flex-row md:px-[7.5rem]"
 			>
 				<button
+					id="about-discovery-call-btn"
 					class="inline-flex items-center justify-center whitespace-nowrap rounded-3xl bg-primary px-14 py-6 text-lg font-medium text-primary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-primary/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 				>
 					<!-- <Image
@@ -90,7 +91,7 @@ import DotGrid from '@/assets/dot-grid-radial-smooth-min.svg';
 					/>	 -->
 					Book a discovery call</button
 				>
-				<a href="/" class="w-full"
+				<a href="/" class="w-full" id="about-view-work-link"
 					><button
 						class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-3xl border border-input bg-background px-14 py-6 text-lg font-medium text-secondary-foreground shadow-md ring-offset-background transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-accent hover:text-accent-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 					>
@@ -101,6 +102,19 @@ import DotGrid from '@/assets/dot-grid-radial-smooth-min.svg';
 		</section>
 	</main>
 </Layout>
+
+<script is:inline>
+	document
+		.getElementById('about-discovery-call-btn')
+		?.addEventListener('click', function () {
+			window.posthog?.capture('discovery_call_clicked', { section: 'about' });
+		});
+	document
+		.getElementById('about-view-work-link')
+		?.addEventListener('click', function () {
+			window.posthog?.capture('view_work_clicked');
+		});
+</script>
 
 <style>
 	h1 > span {

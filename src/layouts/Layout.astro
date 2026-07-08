@@ -1,6 +1,7 @@
 ---
 import Banner from '@/components/Banner.astro';
 import Footer from '@/components/Footer.astro';
+import PostHog from '@/components/posthog.astro';
 import '@/styles/fonts.css';
 import '@/styles/globals.css';
 
@@ -33,6 +34,7 @@ const {
 		<link rel="preconnect" href="https://rsms.me/" />
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<title>{title}</title>
+		<PostHog />
 	</head>
 	<body class="flex min-h-screen flex-col bg-primary">
 		<Banner class="px-2"
@@ -41,7 +43,7 @@ const {
 			></span><p class="text-xs text-primary-foreground md:mr-4">
 				Currently taking on select projects
 			</p>
-			<a href="mailto:hello@bishoym.com">
+			<a href="mailto:hello@bishoym.com" id="banner-cta">
 				<button
 					class="hidden rounded-3xl bg-sky-700 px-3 py-1 text-xs text-primary-foreground hover:bg-sky-700/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:inline-block"
 					>Get in touch →</button
@@ -52,5 +54,13 @@ const {
 		<slot />
 
 		<Footer />
+
+		<script is:inline>
+			document
+				.getElementById('banner-cta')
+				?.addEventListener('click', function () {
+					window.posthog?.capture('banner_cta_clicked');
+				});
+		</script>
 	</body>
 </html>
